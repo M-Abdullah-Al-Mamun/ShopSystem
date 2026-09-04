@@ -48,20 +48,20 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnAddMember = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtRole = new System.Windows.Forms.TextBox();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnBackfromAddMember = new System.Windows.Forms.Button();
             this.pnlAddMember = new System.Windows.Forms.Panel();
+            this.btnBackfromAddMember = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.txtRole = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAddMember = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -266,131 +266,6 @@
             this.panel4.TabIndex = 3;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // btnAddMember
-            // 
-            this.btnAddMember.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnAddMember.Location = new System.Drawing.Point(467, 0);
-            this.btnAddMember.Name = "btnAddMember";
-            this.btnAddMember.Size = new System.Drawing.Size(122, 42);
-            this.btnAddMember.TabIndex = 1;
-            this.btnAddMember.Text = "Add Member";
-            this.btnAddMember.UseVisualStyleBackColor = false;
-            this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(163, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Id";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(163, 87);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Name";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label6.Location = new System.Drawing.Point(163, 113);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 20);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Password";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label8.Location = new System.Drawing.Point(163, 139);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 20);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Role";
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(259, 58);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(165, 20);
-            this.txtId.TabIndex = 9;
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(259, 87);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(165, 20);
-            this.txtName.TabIndex = 10;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(259, 113);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(165, 20);
-            this.txtPassword.TabIndex = 11;
-            // 
-            // txtRole
-            // 
-            this.txtRole.Location = new System.Drawing.Point(259, 139);
-            this.txtRole.Name = "txtRole";
-            this.txtRole.Size = new System.Drawing.Size(165, 20);
-            this.txtRole.TabIndex = 12;
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.linkLabel3.Location = new System.Drawing.Point(225, 24);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(168, 17);
-            this.linkLabel3.TabIndex = 13;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "New Member Information ";
-            // 
-            // btnClear
-            // 
-            this.btnClear.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnClear.Location = new System.Drawing.Point(283, 185);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(71, 32);
-            this.btnClear.TabIndex = 14;
-            this.btnClear.Text = "Clean";
-            this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnAdd.Location = new System.Drawing.Point(355, 185);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(69, 31);
-            this.btnAdd.TabIndex = 15;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            // 
-            // btnBackfromAddMember
-            // 
-            this.btnBackfromAddMember.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnBackfromAddMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnBackfromAddMember.Location = new System.Drawing.Point(453, 185);
-            this.btnBackfromAddMember.Name = "btnBackfromAddMember";
-            this.btnBackfromAddMember.Size = new System.Drawing.Size(87, 32);
-            this.btnBackfromAddMember.TabIndex = 16;
-            this.btnBackfromAddMember.Text = "Back";
-            this.btnBackfromAddMember.UseVisualStyleBackColor = false;
-            this.btnBackfromAddMember.Click += new System.EventHandler(this.btnBackfromAddMember_Click);
-            // 
             // pnlAddMember
             // 
             this.pnlAddMember.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -412,6 +287,131 @@
             this.pnlAddMember.Size = new System.Drawing.Size(592, 343);
             this.pnlAddMember.TabIndex = 14;
             this.pnlAddMember.Visible = false;
+            // 
+            // btnBackfromAddMember
+            // 
+            this.btnBackfromAddMember.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnBackfromAddMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnBackfromAddMember.Location = new System.Drawing.Point(467, 276);
+            this.btnBackfromAddMember.Name = "btnBackfromAddMember";
+            this.btnBackfromAddMember.Size = new System.Drawing.Size(87, 32);
+            this.btnBackfromAddMember.TabIndex = 16;
+            this.btnBackfromAddMember.Text = "Back";
+            this.btnBackfromAddMember.UseVisualStyleBackColor = false;
+            this.btnBackfromAddMember.Click += new System.EventHandler(this.btnBackfromAddMember_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnAdd.Location = new System.Drawing.Point(355, 185);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(69, 31);
+            this.btnAdd.TabIndex = 15;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnClear.Location = new System.Drawing.Point(283, 185);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(71, 32);
+            this.btnClear.TabIndex = 14;
+            this.btnClear.Text = "Clean";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.linkLabel3.Location = new System.Drawing.Point(225, 24);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(168, 17);
+            this.linkLabel3.TabIndex = 13;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "New Member Information ";
+            // 
+            // txtRole
+            // 
+            this.txtRole.Location = new System.Drawing.Point(259, 139);
+            this.txtRole.Name = "txtRole";
+            this.txtRole.Size = new System.Drawing.Size(165, 20);
+            this.txtRole.TabIndex = 12;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(259, 113);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(165, 20);
+            this.txtPassword.TabIndex = 11;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(259, 87);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(165, 20);
+            this.txtName.TabIndex = 10;
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(259, 58);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(165, 20);
+            this.txtId.TabIndex = 9;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label8.Location = new System.Drawing.Point(163, 139);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 20);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Role";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label6.Location = new System.Drawing.Point(163, 113);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 20);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Password";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.Location = new System.Drawing.Point(163, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 20);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Name";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(163, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(23, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Id";
+            // 
+            // btnAddMember
+            // 
+            this.btnAddMember.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnAddMember.Location = new System.Drawing.Point(467, 0);
+            this.btnAddMember.Name = "btnAddMember";
+            this.btnAddMember.Size = new System.Drawing.Size(122, 42);
+            this.btnAddMember.TabIndex = 1;
+            this.btnAddMember.Text = "Add Member";
+            this.btnAddMember.UseVisualStyleBackColor = false;
+            this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
             // 
             // AdminForm
             // 
