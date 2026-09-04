@@ -59,5 +59,10 @@ namespace ShopSystem
         {
 
         }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
