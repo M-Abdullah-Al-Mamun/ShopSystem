@@ -91,9 +91,9 @@
             this.label11.Location = new System.Drawing.Point(13, 33);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(215, 32);
+            this.label11.Size = new System.Drawing.Size(232, 32);
             this.label11.TabIndex = 7;
-            this.label11.Text = "Sale Dashbord";
+            this.label11.Text = "Sale Dashboard";
             // 
             // panel2
             // 
