@@ -25,8 +25,7 @@ namespace ShopSystem
 
         private void btnBackfromSS_Click(object sender, EventArgs e)
         {
-            AdminForm ad=new AdminForm();
-            ad.Show();
+            
             this.Visible = false;
 
         }
