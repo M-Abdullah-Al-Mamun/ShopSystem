@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlMenue = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.masterSetupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,75 +48,68 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pnlAddMember = new System.Windows.Forms.Panel();
-            this.btnBackfromAddMember = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.txtRole = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnAddMember = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.btnShowMenue = new System.Windows.Forms.Button();
+            this.menuStrip4 = new System.Windows.Forms.MenuStrip();
+            this.masterSetupToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.addMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showMemberListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlMenue.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.menuStrip3.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.pnlAddMember.SuspendLayout();
+            this.menuStrip4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlMenue
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(238, 453);
-            this.panel1.TabIndex = 0;
+            this.pnlMenue.BackColor = System.Drawing.Color.MidnightBlue;
+            this.pnlMenue.Controls.Add(this.panel2);
+            this.pnlMenue.Controls.Add(this.linkLabel1);
+            this.pnlMenue.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlMenue.Location = new System.Drawing.Point(0, 0);
+            this.pnlMenue.Name = "pnlMenue";
+            this.pnlMenue.Size = new System.Drawing.Size(214, 453);
+            this.pnlMenue.TabIndex = 0;
+            this.pnlMenue.Visible = false;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.menuStrip1);
-            this.panel2.Controls.Add(this.btnBack);
             this.panel2.Controls.Add(this.menuStrip2);
             this.panel2.Controls.Add(this.menuStrip3);
+            this.panel2.Controls.Add(this.menuStrip4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 48);
+            this.panel2.Location = new System.Drawing.Point(0, 68);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(238, 405);
+            this.panel2.Size = new System.Drawing.Size(214, 385);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuStrip1.BackColor = System.Drawing.Color.MidnightBlue;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.masterSetupToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 80);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 120);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(238, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(214, 40);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // masterSetupToolStripMenuItem
             // 
-            this.masterSetupToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.masterSetupToolStripMenuItem.BackColor = System.Drawing.Color.MidnightBlue;
             this.masterSetupToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.productEntryStripMenuItem,
             this.productUpdateStripMenuItem,
             this.allProductListStripMenuItem});
             this.masterSetupToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.masterSetupToolStripMenuItem.Name = "masterSetupToolStripMenuItem";
-            this.masterSetupToolStripMenuItem.Size = new System.Drawing.Size(168, 36);
-            this.masterSetupToolStripMenuItem.Text = "Master Setup";
+            this.masterSetupToolStripMenuItem.Size = new System.Drawing.Size(177, 36);
+            this.masterSetupToolStripMenuItem.Text = "Product Setup";
             this.masterSetupToolStripMenuItem.Click += new System.EventHandler(this.masterSetupToolStripMenuItem_Click);
             // 
             // productEntryStripMenuItem
@@ -140,24 +133,24 @@
             // 
             // btnBack
             // 
-            this.btnBack.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnBack.Location = new System.Drawing.Point(51, 328);
+            this.btnBack.Location = new System.Drawing.Point(474, 275);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(112, 42);
             this.btnBack.TabIndex = 1;
-            this.btnBack.Text = "Back";
+            this.btnBack.Text = "Logout";
             this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnBack.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // menuStrip2
             // 
-            this.menuStrip2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuStrip2.BackColor = System.Drawing.Color.MidnightBlue;
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saleToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 40);
+            this.menuStrip2.Location = new System.Drawing.Point(0, 80);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(238, 40);
+            this.menuStrip2.Size = new System.Drawing.Size(214, 40);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -188,12 +181,12 @@
             // 
             // menuStrip3
             // 
-            this.menuStrip3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuStrip3.BackColor = System.Drawing.Color.MidnightBlue;
             this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.inventoryToolStripMenuItem});
-            this.menuStrip3.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip3.Location = new System.Drawing.Point(0, 40);
             this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.Size = new System.Drawing.Size(238, 40);
+            this.menuStrip3.Size = new System.Drawing.Size(214, 40);
             this.menuStrip3.TabIndex = 2;
             this.menuStrip3.Text = "menuStrip3";
             // 
@@ -223,9 +216,13 @@
             // 
             // linkLabel1
             // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.LightGray;
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.MidnightBlue;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.linkLabel1.Location = new System.Drawing.Point(74, 20);
+            this.linkLabel1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Location = new System.Drawing.Point(12, 40);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(73, 25);
             this.linkLabel1.TabIndex = 0;
@@ -236,11 +233,12 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel3.Controls.Add(this.btnShowMenue);
             this.panel3.Controls.Add(this.linkLabel2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(238, 0);
+            this.panel3.Location = new System.Drawing.Point(214, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(592, 112);
+            this.panel3.Size = new System.Drawing.Size(616, 112);
             this.panel3.TabIndex = 2;
             // 
             // linkLabel2
@@ -257,161 +255,62 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel4.Controls.Add(this.pnlAddMember);
-            this.panel4.Controls.Add(this.btnAddMember);
+            this.panel4.Controls.Add(this.btnBack);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(238, 110);
+            this.panel4.Location = new System.Drawing.Point(214, 108);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(592, 343);
+            this.panel4.Size = new System.Drawing.Size(616, 345);
             this.panel4.TabIndex = 3;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // pnlAddMember
+            // btnShowMenue
             // 
-            this.pnlAddMember.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.pnlAddMember.Controls.Add(this.btnBackfromAddMember);
-            this.pnlAddMember.Controls.Add(this.btnAdd);
-            this.pnlAddMember.Controls.Add(this.btnClear);
-            this.pnlAddMember.Controls.Add(this.linkLabel3);
-            this.pnlAddMember.Controls.Add(this.txtRole);
-            this.pnlAddMember.Controls.Add(this.txtPassword);
-            this.pnlAddMember.Controls.Add(this.txtName);
-            this.pnlAddMember.Controls.Add(this.txtId);
-            this.pnlAddMember.Controls.Add(this.label8);
-            this.pnlAddMember.Controls.Add(this.label6);
-            this.pnlAddMember.Controls.Add(this.label4);
-            this.pnlAddMember.Controls.Add(this.label1);
-            this.pnlAddMember.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlAddMember.Location = new System.Drawing.Point(0, 0);
-            this.pnlAddMember.Name = "pnlAddMember";
-            this.pnlAddMember.Size = new System.Drawing.Size(592, 343);
-            this.pnlAddMember.TabIndex = 14;
-            this.pnlAddMember.Visible = false;
+            this.btnShowMenue.BackColor = System.Drawing.Color.Honeydew;
+            this.btnShowMenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.btnShowMenue.Location = new System.Drawing.Point(3, 3);
+            this.btnShowMenue.Name = "btnShowMenue";
+            this.btnShowMenue.Size = new System.Drawing.Size(46, 38);
+            this.btnShowMenue.TabIndex = 17;
+            this.btnShowMenue.Text = "☰";
+            this.btnShowMenue.UseVisualStyleBackColor = false;
+            this.btnShowMenue.Click += new System.EventHandler(this.btnShowMenue_Click);
             // 
-            // btnBackfromAddMember
+            // menuStrip4
             // 
-            this.btnBackfromAddMember.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnBackfromAddMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnBackfromAddMember.Location = new System.Drawing.Point(467, 276);
-            this.btnBackfromAddMember.Name = "btnBackfromAddMember";
-            this.btnBackfromAddMember.Size = new System.Drawing.Size(87, 32);
-            this.btnBackfromAddMember.TabIndex = 16;
-            this.btnBackfromAddMember.Text = "Back";
-            this.btnBackfromAddMember.UseVisualStyleBackColor = false;
-            this.btnBackfromAddMember.Click += new System.EventHandler(this.btnBackfromAddMember_Click);
+            this.menuStrip4.BackColor = System.Drawing.Color.MidnightBlue;
+            this.menuStrip4.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.masterSetupToolStripMenuItem1});
+            this.menuStrip4.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip4.Name = "menuStrip4";
+            this.menuStrip4.Size = new System.Drawing.Size(214, 40);
+            this.menuStrip4.TabIndex = 3;
+            this.menuStrip4.Text = "menuStrip4";
+            this.menuStrip4.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip4_ItemClicked);
             // 
-            // btnAdd
+            // masterSetupToolStripMenuItem1
             // 
-            this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnAdd.Location = new System.Drawing.Point(355, 185);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(69, 31);
-            this.btnAdd.TabIndex = 15;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.masterSetupToolStripMenuItem1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.masterSetupToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addMemberToolStripMenuItem,
+            this.showMemberListToolStripMenuItem});
+            this.masterSetupToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.masterSetupToolStripMenuItem1.Name = "masterSetupToolStripMenuItem1";
+            this.masterSetupToolStripMenuItem1.Size = new System.Drawing.Size(168, 36);
+            this.masterSetupToolStripMenuItem1.Text = "Master Setup";
             // 
-            // btnClear
+            // addMemberToolStripMenuItem
             // 
-            this.btnClear.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnClear.Location = new System.Drawing.Point(283, 185);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(71, 32);
-            this.btnClear.TabIndex = 14;
-            this.btnClear.Text = "Clean";
-            this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.addMemberToolStripMenuItem.Name = "addMemberToolStripMenuItem";
+            this.addMemberToolStripMenuItem.Size = new System.Drawing.Size(286, 36);
+            this.addMemberToolStripMenuItem.Text = "Add Member";
+            this.addMemberToolStripMenuItem.Click += new System.EventHandler(this.addMemberToolStripMenuItem_Click);
             // 
-            // linkLabel3
+            // showMemberListToolStripMenuItem
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.linkLabel3.Location = new System.Drawing.Point(225, 24);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(168, 17);
-            this.linkLabel3.TabIndex = 13;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "New Member Information ";
-            // 
-            // txtRole
-            // 
-            this.txtRole.Location = new System.Drawing.Point(259, 139);
-            this.txtRole.Name = "txtRole";
-            this.txtRole.Size = new System.Drawing.Size(165, 20);
-            this.txtRole.TabIndex = 12;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(259, 113);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(165, 20);
-            this.txtPassword.TabIndex = 11;
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(259, 87);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(165, 20);
-            this.txtName.TabIndex = 10;
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(259, 58);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(165, 20);
-            this.txtId.TabIndex = 9;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label8.Location = new System.Drawing.Point(163, 139);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 20);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Role";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label6.Location = new System.Drawing.Point(163, 113);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 20);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Password";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(163, 87);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Name";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(163, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Id";
-            // 
-            // btnAddMember
-            // 
-            this.btnAddMember.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnAddMember.Location = new System.Drawing.Point(467, 0);
-            this.btnAddMember.Name = "btnAddMember";
-            this.btnAddMember.Size = new System.Drawing.Size(122, 42);
-            this.btnAddMember.TabIndex = 1;
-            this.btnAddMember.Text = "Add Member";
-            this.btnAddMember.UseVisualStyleBackColor = false;
-            this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
+            this.showMemberListToolStripMenuItem.Name = "showMemberListToolStripMenuItem";
+            this.showMemberListToolStripMenuItem.Size = new System.Drawing.Size(286, 36);
+            this.showMemberListToolStripMenuItem.Text = "Show Member List";
             // 
             // AdminForm
             // 
@@ -420,13 +319,13 @@
             this.ClientSize = new System.Drawing.Size(830, 453);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlMenue);
             this.MainMenuStrip = this.menuStrip3;
             this.Name = "AdminForm";
             this.Text = "Admin Dashbord";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminForm_FormClosed);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlMenue.ResumeLayout(false);
+            this.pnlMenue.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -438,15 +337,15 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.pnlAddMember.ResumeLayout(false);
-            this.pnlAddMember.PerformLayout();
+            this.menuStrip4.ResumeLayout(false);
+            this.menuStrip4.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlMenue;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -465,20 +364,11 @@
         private System.Windows.Forms.ToolStripMenuItem StackStripMenuItem;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.Button btnAddMember;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel pnlAddMember;
-        private System.Windows.Forms.Button btnBackfromAddMember;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.TextBox txtRole;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnShowMenue;
+        private System.Windows.Forms.MenuStrip menuStrip4;
+        private System.Windows.Forms.ToolStripMenuItem masterSetupToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem addMemberToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showMemberListToolStripMenuItem;
     }
 }
