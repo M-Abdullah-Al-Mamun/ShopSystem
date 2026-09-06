@@ -18,9 +18,10 @@ namespace ShopSystem
         {
             InitializeComponent();
         }
-        public AdminForm(string name, LoginForm LF) : this()
+        public AdminForm(string name, LoginForm lf) : this()
         {
-           // this.lbl.Text += name;
+           this.linklblUserName.Text += name;
+            this.LF = lf;
            
         }
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -105,6 +106,11 @@ namespace ShopSystem
             AddMemberForm addMember = new AddMemberForm();
             addMember.Show();
             this.Visible = false;
+        }
+
+        private void linklblUserName_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }
