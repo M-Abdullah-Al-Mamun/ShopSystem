@@ -41,12 +41,10 @@
             this.saleSummaryStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productReceiveStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StackStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip4 = new System.Windows.Forms.MenuStrip();
             this.masterSetupToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.addMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showMemberListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnBack = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -55,6 +53,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.linklblUserName = new System.Windows.Forms.LinkLabel();
+            this.UpdateDeleteStripMenue = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlMenue.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -187,7 +186,6 @@
             // inventoryToolStripMenuItem
             // 
             this.inventoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.productReceiveStripMenuItem,
             this.StackStripMenuItem});
             this.inventoryToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.inventoryToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -195,17 +193,10 @@
             this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
             this.inventoryToolStripMenuItem.Text = "Inventory";
             // 
-            // productReceiveStripMenuItem
-            // 
-            this.productReceiveStripMenuItem.Name = "productReceiveStripMenuItem";
-            this.productReceiveStripMenuItem.Size = new System.Drawing.Size(265, 36);
-            this.productReceiveStripMenuItem.Text = "Product Receive ";
-            this.productReceiveStripMenuItem.Click += new System.EventHandler(this.productReceiveStripMenuItem_Click);
-            // 
             // StackStripMenuItem
             // 
             this.StackStripMenuItem.Name = "StackStripMenuItem";
-            this.StackStripMenuItem.Size = new System.Drawing.Size(265, 36);
+            this.StackStripMenuItem.Size = new System.Drawing.Size(152, 36);
             this.StackStripMenuItem.Text = "Stock ";
             this.StackStripMenuItem.Click += new System.EventHandler(this.StackStripMenuItem_Click);
             // 
@@ -227,7 +218,7 @@
             this.masterSetupToolStripMenuItem1.BackColor = System.Drawing.Color.MidnightBlue;
             this.masterSetupToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addMemberToolStripMenuItem,
-            this.showMemberListToolStripMenuItem});
+            this.UpdateDeleteStripMenue});
             this.masterSetupToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.masterSetupToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.masterSetupToolStripMenuItem1.Name = "masterSetupToolStripMenuItem1";
@@ -237,15 +228,9 @@
             // addMemberToolStripMenuItem
             // 
             this.addMemberToolStripMenuItem.Name = "addMemberToolStripMenuItem";
-            this.addMemberToolStripMenuItem.Size = new System.Drawing.Size(286, 36);
+            this.addMemberToolStripMenuItem.Size = new System.Drawing.Size(340, 36);
             this.addMemberToolStripMenuItem.Text = "Add Member";
             this.addMemberToolStripMenuItem.Click += new System.EventHandler(this.addMemberToolStripMenuItem_Click);
-            // 
-            // showMemberListToolStripMenuItem
-            // 
-            this.showMemberListToolStripMenuItem.Name = "showMemberListToolStripMenuItem";
-            this.showMemberListToolStripMenuItem.Size = new System.Drawing.Size(286, 36);
-            this.showMemberListToolStripMenuItem.Text = "Show Member List";
             // 
             // linkLabel1
             // 
@@ -344,6 +329,13 @@
             this.linklblUserName.Text = "Current User: ";
             this.linklblUserName.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblUserName_LinkClicked);
             // 
+            // UpdateDeleteStripMenue
+            // 
+            this.UpdateDeleteStripMenue.Name = "UpdateDeleteStripMenue";
+            this.UpdateDeleteStripMenue.Size = new System.Drawing.Size(340, 36);
+            this.UpdateDeleteStripMenue.Text = "Update & DeleteMember";
+            this.UpdateDeleteStripMenue.Click += new System.EventHandler(this.UpdateDeleteStripMenue_Click);
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,7 +386,6 @@
         private System.Windows.Forms.MenuStrip menuStrip3;
         private System.Windows.Forms.ToolStripMenuItem allProductListStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productReceiveStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem StackStripMenuItem;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.LinkLabel linkLabel2;
@@ -403,8 +394,8 @@
         private System.Windows.Forms.MenuStrip menuStrip4;
         private System.Windows.Forms.ToolStripMenuItem masterSetupToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem addMemberToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem showMemberListToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.LinkLabel linklblUserName;
+        private System.Windows.Forms.ToolStripMenuItem UpdateDeleteStripMenue;
     }
 }
