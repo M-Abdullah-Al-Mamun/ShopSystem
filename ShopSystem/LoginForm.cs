@@ -38,7 +38,7 @@ namespace ShopSystem
                 }
                 else if (ds.Tables[0].Rows[0][3].ToString() == "Manager")
                 {
-                    //.................................
+                    new ManagerForm().Show();
                 }
                 else if (ds.Tables[0].Rows[0][3].ToString() == "Sales Man")
                 {
