@@ -48,19 +48,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddMemberForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddMemberForm.Designer.cs">
-      <DependentUpon>AddMemberForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ForDatabaseShortcutClass.cs" />
+    <Compile Include="ManagerForm.cs" />
+    <Compile Include="ManagerForm.Designer.cs">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductUpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +89,10 @@
     <Compile Include="StockForm.Designer.cs">
       <DependentUpon>StockForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductReceiveForm.cs" />
+    <Compile Include="ProductReceiveForm.Designer.cs">
+      <DependentUpon>ProductReceiveForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,20 +101,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UpdateMemberInfoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateMemberInfoForm.Designer.cs">
-      <DependentUpon>UpdateMemberInfoForm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="AddMemberForm.resx">
-      <DependentUpon>AddMemberForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForm.resx">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProductEntryForm.resx">
       <DependentUpon>ProductEntryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductReceiveForm.resx">
+      <DependentUpon>ProductReceiveForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -138,9 +136,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StockForm.resx">
       <DependentUpon>StockForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UpdateMemberInfoForm.resx">
-      <DependentUpon>UpdateMemberInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
