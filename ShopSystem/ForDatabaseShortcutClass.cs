@@ -39,8 +39,7 @@ namespace ShopSystem
         }
         public ForDatabaseShortcutClass()
         {
-            this.Sqlcon = new SqlConnection(@"Data Source=DESKTOP-9IP21J0\SQLEXPRESS;Initial Catalog=c#ProjectDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
-            Sqlcon.Open();
+            this.Sqlcon = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=TestDatabase;Integrated Security=True;Encrypt=False");
         }
         private void QueryText(string query)
         {
@@ -66,7 +65,13 @@ namespace ShopSystem
         public int ExecuteDMLQuery(string sql)
         {
             this.Sqlcom = new SqlCommand(sql, this.Sqlcon);
+
+            this.Sqlcon.Open();
+
             int u = this.Sqlcom.ExecuteNonQuery();
+
+            this.Sqlcon.Close();
+
             return u;
         }
 
