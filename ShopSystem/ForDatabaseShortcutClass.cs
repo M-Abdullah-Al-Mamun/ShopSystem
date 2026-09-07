@@ -39,7 +39,7 @@ namespace ShopSystem
         }
         public ForDatabaseShortcutClass()
         {
-            this.Sqlcon = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=TestDatabase;Integrated Security=True;Encrypt=False");
+            this.Sqlcon = new SqlConnection(@"Data Source=DESKTOP-9IP21J0\SQLEXPRESS;Initial Catalog=c#ProjectDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
         }
         private void QueryText(string query)
         {
