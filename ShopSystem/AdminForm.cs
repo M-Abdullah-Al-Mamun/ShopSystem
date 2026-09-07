@@ -42,13 +42,6 @@ namespace ShopSystem
 
         }
 
-        private void productReceiveStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ProductReceiveForm pr= new ProductReceiveForm();
-            pr.Show();
-            this.Visible=false;
-        }
-
         private void StackStripMenuItem_Click(object sender, EventArgs e)
         {
             StockForm stc= new StockForm();
@@ -110,6 +103,14 @@ namespace ShopSystem
 
         private void linklblUserName_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+
+        }
+
+        private void UpdateDeleteStripMenue_Click(object sender, EventArgs e)
+        {
+            UpdateMemberInfoForm update= new UpdateMemberInfoForm();
+            update.Show();
+            this.Visible= false;
 
         }
     }
