@@ -19,94 +19,145 @@ namespace ShopSystem
             InitializeComponent();
         }
 
-        private void btnBackfromSE_Click(object sender, EventArgs e)
-        {
-           
-            this.Visible = false;
-        }
-
-        private void SaleEntryForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void SaleEntryForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
 
+        private void btnBackfromSE_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string pcodesearch = txtPcodeSaleEntrySearch.Text;
-            string pcode = txtPcodeShow.Text;
-            string pname = txtPnameShow.Text;
-            string pprice = txtPpriceShow.Text;
-            string pquantity = txtPquantityShow.Text;
+
+            string search = txtPcodeSaleEntrySearch.Text;
 
             try
             {
-                if (string.IsNullOrEmpty(pcodesearch))
+               if (!string.IsNullOrEmpty(search))
                 {
-                    MessageBox.Show("Please enter a product code to search.", "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                else
-                {
-                    lblDetails.Visible = true;
-                    lblcode.Visible = true;
-                    lblName.Visible = true;
-                    lblPrice.Visible = true;
-                    lblQuantitu.Visible = true;
-                    txtPcodeShow.Visible = true;
-                    txtPnameShow.Visible = true;
-                    txtPpriceShow.Visible = true;
-                    txtPquantityShow.Visible = true; 
-
-
-
                     SqlConnection con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=TestDatabase;Integrated Security=True;Encrypt=False");
-
                     con.Open();
-
-                    string query = $"Select Productcode,Productname, Price, Quantity From Product Where Productcode = '{pcodesearch}'";
-
+                    var query = $"Select * from Product where Productcode = '{search}'";
                     SqlCommand cmd = new SqlCommand(query, con);
-
+                    SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    adp.Fill(ds);
+                    DataTable dt = ds.Tables[0];
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     if (reader.Read())
                     {
-                        this.txtPcodeShow.Text = reader["Productcode"].ToString();
-                        this.txtPnameShow.Text = reader["Productname"].ToString();
-                        this.txtPpriceShow.Text = reader["Price"].ToString();
-                        this.txtPquantityShow.Text = reader["Quantity"].ToString();
+                        lblDetails.Show();
 
+                        lblcode.Show();
+                        lblName.Show();
+                        lblPrice.Show();
+                        lblQuantity.Show();
+
+                        txtPcodeShow.Show();
+                        txtPnameShow.Show();
+                        txtPpriceShow.Show();
+                        txtPquantityShow.Show();
+
+                        txtPcodeShow.Text = reader["Productcode"].ToString();
+                        txtPnameShow.Text = reader["Productname"].ToString();
+                        txtPpriceShow.Text = reader["Price"].ToString();
+                        txtPquantityShow.Text = reader["Quantity"].ToString();
+
+                       this.btnAdd.Enabled = true;
+                       this.txtAddedQuantity.Enabled = true;
 
                     }
                     else
                     {
-                        MessageBox.Show("Product code not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                        this.txtPcodeShow.Clear();
-                        this.txtPnameShow.Clear();
-                        this.txtPpriceShow.Clear();
-                        this.txtPquantityShow.Clear();
-
-
+                        MessageBox.Show("Product not found.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
-                    reader.Close();
-                    con.Close();
 
 
                 }
+                else
+                {
+                    MessageBox.Show("Please enter a product code.", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+
 
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error occurred while searching for product: \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error occurred while fetching data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                if (!string.IsNullOrEmpty(this.txtAddedQuantity.Text))
+                {
+                    if (Convert.ToDecimal(this.txtAddedQuantity.Text) > Convert.ToDecimal(this.txtPquantityShow.Text))
+                    {
+                        MessageBox.Show("Not enough quantity available in stock.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    { string quantity = this.txtAddedQuantity.Text;
+
+
+                        DataGridViewRow newrow = new DataGridViewRow();
+
+                        DataGridViewCell cell1 = new DataGridViewTextBoxCell();
+                        cell1.Value = this.txtPcodeShow.Text;
+                        newrow.Cells.Add(cell1);
+                        DataGridViewCell cell2 = new DataGridViewTextBoxCell();
+                        cell2.Value = this.txtPnameShow.Text;
+                        newrow.Cells.Add(cell2);
+                        DataGridViewCell cell3 = new DataGridViewTextBoxCell();
+                        cell3.Value = this.txtPpriceShow.Text;
+                        newrow.Cells.Add(cell3);
+                        DataGridViewCell cell4 = new DataGridViewTextBoxCell();
+                        cell4.Value = this.txtAddedQuantity.Text;
+                        newrow.Cells.Add(cell4);
+                        DataGridViewCell cell5 = new DataGridViewTextBoxCell();
+                        cell5.Value = Convert.ToDecimal(quantity) * Convert.ToDecimal(this.txtPpriceShow.Text);
+                        newrow.Cells.Add(cell5);
+
+                        gridSaleEntry.Rows.Add(newrow);
+
+
+                        this.txtGrandTotal.Text = (from DataGridViewRow row in gridSaleEntry.Rows
+                                                   where row.Cells[4].FormattedValue.ToString() != string.Empty
+                                                   select Convert.ToDecimal(row.Cells[4].FormattedValue)).Sum().ToString();
+                        this.lblGrandTotal.Show();
+                        this.txtGrandTotal.Show();
+
+                        this.txtAddedQuantity.Text = "";
+                        this.txtPcodeSaleEntrySearch.Clear();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a quantity to add to the list.", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                
+            }
+            
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error occurred while adding product: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtAddedQuantity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
