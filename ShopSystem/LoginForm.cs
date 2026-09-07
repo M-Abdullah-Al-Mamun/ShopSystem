@@ -20,7 +20,7 @@ namespace ShopSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            var sql = "select * from LoginTable where Name='"+this.txtUsername.Text+"'and Password='"+this.txtPassword.Text+"';";
+            var sql = "select * from LoginTable where Id='"+this.txtId.Text+"'and Password='"+this.txtPassword.Text+"';";
             SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-9IP21J0\SQLEXPRESS;Initial Catalog=c#ProjectDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
             sqlcon.Open();
             SqlCommand sqlcom = new SqlCommand(sql,sqlcon);
@@ -49,7 +49,7 @@ namespace ShopSystem
             else
             {
                 MessageBox.Show("Invalid user");
-                this.txtUsername.Clear();
+                this.txtId.Clear();
                 this.txtPassword.Clear();
             }
             sqlcon.Close();
@@ -58,6 +58,11 @@ namespace ShopSystem
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

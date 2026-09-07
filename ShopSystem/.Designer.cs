@@ -40,6 +40,7 @@
             this.btnBackfromPE.TabIndex = 1;
             this.btnBackfromPE.Text = "Back";
             this.btnBackfromPE.UseVisualStyleBackColor = false;
+            this.btnBackfromPE.Click += new System.EventHandler(this.btnBackfromPE_Click);
             // 
             // ProductUpdateForm
             // 

@@ -47,7 +47,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -85,7 +84,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.txtPSearchforSale);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.label1);
@@ -257,15 +255,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(484, 73);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(337, 16);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(77, 13);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Sale Dashbord";
-            // 
             // SaleEntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,6 +299,5 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label11;
     }
 }

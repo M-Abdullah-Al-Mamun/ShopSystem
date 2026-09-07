@@ -18,9 +18,10 @@ namespace ShopSystem
         {
             InitializeComponent();
         }
-        public AdminForm(string name, LoginForm LF) : this()
+        public AdminForm(string name, LoginForm lf) : this()
         {
-           // this.lbl.Text += name;
+           this.linklblUserName.Text += name;
+            this.LF = lf;
            
         }
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -28,18 +29,12 @@ namespace ShopSystem
 
         }
 
-        private void toolStripComboBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             LoginForm lg= new LoginForm();
+            MessageBox.Show("Logged out from the system");
             lg.Show();
             this.Visible = false;
-
-
         }
 
         private void masterSetupToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,19 +42,11 @@ namespace ShopSystem
 
         }
 
-        private void productReceiveStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ProductReceiveForm pr= new ProductReceiveForm();
-            pr.Show();
-            this.Visible=false;
-        }
-
         private void StackStripMenuItem_Click(object sender, EventArgs e)
         {
             StockForm stc= new StockForm();
             stc.Show();
             this.Visible = false;
-
         }
 
         private void salePunchStripMenuItem_Click(object sender, EventArgs e)
@@ -67,7 +54,6 @@ namespace ShopSystem
             SaleEntryForm se= new SaleEntryForm();
             se.Show();
             this.Visible = false;
-
         }
 
         private void saleSummaryStripMenuItem_Click(object sender, EventArgs e)
@@ -85,33 +71,47 @@ namespace ShopSystem
             this.Visible = false;
 
         }
-
-        private void btnAddMember_Click(object sender, EventArgs e)
-        {
-            pnlAddMember.Visible = true;
-        }
-
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            this.txtId.Clear();
-            this.txtName.Clear();
-            this.txtPassword.Clear();
-            this.txtRole.Clear();
-        }
-
-        private void btnBackfromAddMember_Click(object sender, EventArgs e)
-        {
-            pnlAddMember.Visible= false;
-        }
-
         private void AdminForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+        private void btnShowMenue_Click(object sender, EventArgs e)
+        {
+            this.pnlMenue.Visible = true;
+        }
+
+        private void menuStrip4_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void addMemberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddMemberForm addMember = new AddMemberForm();
+            addMember.Show();
+            this.Visible = false;
+        }
+
+        private void linklblUserName_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void UpdateDeleteStripMenue_Click(object sender, EventArgs e)
+        {
+            UpdateMemberInfoForm update= new UpdateMemberInfoForm();
+            update.Show();
+            this.Visible= false;
+
         }
     }
 }
