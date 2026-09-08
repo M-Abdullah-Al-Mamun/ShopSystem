@@ -106,6 +106,7 @@
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -114,18 +115,18 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(164, 26);
             this.txtSearch.TabIndex = 3;
-            this.txtSearch.Text = "Search By Code";
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label1.Location = new System.Drawing.Point(38, 46);
+            this.label1.Location = new System.Drawing.Point(12, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 25);
+            this.label1.Size = new System.Drawing.Size(228, 25);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Product Search";
+            this.label1.Text = "Product Search By Code";
             // 
             // panel3
             // 
@@ -154,21 +155,25 @@
             // 
             // Column1
             // 
+            this.Column1.DataPropertyName = "Code";
             this.Column1.HeaderText = "Code";
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
+            this.Column2.DataPropertyName = "Name";
             this.Column2.HeaderText = "Name";
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
+            this.Column3.DataPropertyName = "Price";
             this.Column3.HeaderText = "Price";
             this.Column3.Name = "Column3";
             // 
             // Column4
             // 
+            this.Column4.DataPropertyName = "Quantity";
             this.Column4.HeaderText = "Quantity";
             this.Column4.Name = "Column4";
             // 
@@ -201,12 +206,12 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dgvProductInfo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox txtSearch;
     }
 }
