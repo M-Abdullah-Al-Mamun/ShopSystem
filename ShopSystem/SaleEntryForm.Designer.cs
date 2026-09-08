@@ -67,10 +67,9 @@
             // 
             this.btnBackfromSE.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBackfromSE.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.btnBackfromSE.Location = new System.Drawing.Point(821, 535);
-            this.btnBackfromSE.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBackfromSE.Location = new System.Drawing.Point(616, 435);
             this.btnBackfromSE.Name = "btnBackfromSE";
-            this.btnBackfromSE.Size = new System.Drawing.Size(137, 46);
+            this.btnBackfromSE.Size = new System.Drawing.Size(103, 37);
             this.btnBackfromSE.TabIndex = 7;
             this.btnBackfromSE.Text = "Back";
             this.btnBackfromSE.UseVisualStyleBackColor = false;
@@ -82,9 +81,8 @@
             this.panel1.Controls.Add(this.label11);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1132, 91);
+            this.panel1.Size = new System.Drawing.Size(849, 74);
             this.panel1.TabIndex = 8;
             // 
             // label11
@@ -92,10 +90,9 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(13, 33);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(7, 28);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(232, 32);
+            this.label11.Size = new System.Drawing.Size(182, 26);
             this.label11.TabIndex = 7;
             this.label11.Text = "Sale Dashboard";
             // 
@@ -118,10 +115,9 @@
             this.panel2.Controls.Add(this.lblName);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(0, 91);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(0, 74);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(315, 503);
+            this.panel2.Size = new System.Drawing.Size(236, 409);
             this.panel2.TabIndex = 9;
             // 
             // txtAddedQuantity
@@ -229,9 +225,10 @@
             "98",
             "99",
             "100"});
-            this.txtAddedQuantity.Location = new System.Drawing.Point(51, 159);
+            this.txtAddedQuantity.Location = new System.Drawing.Point(38, 129);
+            this.txtAddedQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAddedQuantity.Name = "txtAddedQuantity";
-            this.txtAddedQuantity.Size = new System.Drawing.Size(220, 28);
+            this.txtAddedQuantity.Size = new System.Drawing.Size(166, 25);
             this.txtAddedQuantity.TabIndex = 15;
             this.txtAddedQuantity.SelectedIndexChanged += new System.EventHandler(this.txtAddedQuantity_SelectedIndexChanged);
             // 
@@ -240,10 +237,9 @@
             this.lblDetails.AutoSize = true;
             this.lblDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetails.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblDetails.Location = new System.Drawing.Point(59, 256);
-            this.lblDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDetails.Location = new System.Drawing.Point(44, 208);
             this.lblDetails.Name = "lblDetails";
-            this.lblDetails.Size = new System.Drawing.Size(182, 26);
+            this.lblDetails.Size = new System.Drawing.Size(153, 22);
             this.lblDetails.TabIndex = 14;
             this.lblDetails.Text = "Product Details:";
             this.lblDetails.Visible = false;
@@ -253,29 +249,26 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(61, 129);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(46, 105);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(173, 25);
+            this.label3.Size = new System.Drawing.Size(143, 20);
             this.label3.TabIndex = 12;
             this.label3.Text = "Product Quantity";
             // 
             // txtPcodeSaleEntrySearch
             // 
             this.txtPcodeSaleEntrySearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPcodeSaleEntrySearch.Location = new System.Drawing.Point(51, 46);
-            this.txtPcodeSaleEntrySearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPcodeSaleEntrySearch.Location = new System.Drawing.Point(38, 37);
             this.txtPcodeSaleEntrySearch.Name = "txtPcodeSaleEntrySearch";
-            this.txtPcodeSaleEntrySearch.Size = new System.Drawing.Size(220, 27);
+            this.txtPcodeSaleEntrySearch.Size = new System.Drawing.Size(166, 23);
             this.txtPcodeSaleEntrySearch.TabIndex = 9;
             // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSearch.Location = new System.Drawing.Point(105, 78);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch.Location = new System.Drawing.Point(79, 63);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(92, 32);
+            this.btnSearch.Size = new System.Drawing.Size(69, 26);
             this.btnSearch.TabIndex = 10;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -285,10 +278,9 @@
             // 
             this.txtPpriceShow.Enabled = false;
             this.txtPpriceShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPpriceShow.Location = new System.Drawing.Point(142, 394);
-            this.txtPpriceShow.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPpriceShow.Location = new System.Drawing.Point(106, 320);
             this.txtPpriceShow.Name = "txtPpriceShow";
-            this.txtPpriceShow.Size = new System.Drawing.Size(139, 28);
+            this.txtPpriceShow.Size = new System.Drawing.Size(105, 24);
             this.txtPpriceShow.TabIndex = 11;
             this.txtPpriceShow.Visible = false;
             // 
@@ -297,10 +289,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(75, 17);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(56, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 25);
+            this.label1.Size = new System.Drawing.Size(118, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "Product Code";
             // 
@@ -308,10 +299,9 @@
             // 
             this.txtPnameShow.Enabled = false;
             this.txtPnameShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPnameShow.Location = new System.Drawing.Point(142, 350);
-            this.txtPnameShow.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPnameShow.Location = new System.Drawing.Point(106, 284);
             this.txtPnameShow.Name = "txtPnameShow";
-            this.txtPnameShow.Size = new System.Drawing.Size(139, 28);
+            this.txtPnameShow.Size = new System.Drawing.Size(105, 24);
             this.txtPnameShow.TabIndex = 10;
             this.txtPnameShow.Visible = false;
             // 
@@ -319,10 +309,9 @@
             // 
             this.txtPcodeShow.Enabled = false;
             this.txtPcodeShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPcodeShow.Location = new System.Drawing.Point(142, 304);
-            this.txtPcodeShow.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPcodeShow.Location = new System.Drawing.Point(106, 247);
             this.txtPcodeShow.Name = "txtPcodeShow";
-            this.txtPcodeShow.Size = new System.Drawing.Size(139, 28);
+            this.txtPcodeShow.Size = new System.Drawing.Size(105, 24);
             this.txtPcodeShow.TabIndex = 9;
             this.txtPcodeShow.Visible = false;
             // 
@@ -331,10 +320,9 @@
             this.lblcode.AutoSize = true;
             this.lblcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcode.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblcode.Location = new System.Drawing.Point(31, 299);
-            this.lblcode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblcode.Location = new System.Drawing.Point(23, 243);
             this.lblcode.Name = "lblcode";
-            this.lblcode.Size = new System.Drawing.Size(68, 26);
+            this.lblcode.Size = new System.Drawing.Size(57, 22);
             this.lblcode.TabIndex = 8;
             this.lblcode.Text = "Code";
             this.lblcode.Visible = false;
@@ -343,10 +331,9 @@
             // 
             this.btnAdd.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAdd.Enabled = false;
-            this.btnAdd.Location = new System.Drawing.Point(103, 193);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdd.Location = new System.Drawing.Point(77, 157);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(96, 29);
+            this.btnAdd.Size = new System.Drawing.Size(72, 24);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -356,10 +343,9 @@
             // 
             this.txtPquantityShow.Enabled = false;
             this.txtPquantityShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPquantityShow.Location = new System.Drawing.Point(142, 438);
-            this.txtPquantityShow.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPquantityShow.Location = new System.Drawing.Point(106, 356);
             this.txtPquantityShow.Name = "txtPquantityShow";
-            this.txtPquantityShow.Size = new System.Drawing.Size(139, 28);
+            this.txtPquantityShow.Size = new System.Drawing.Size(105, 24);
             this.txtPquantityShow.TabIndex = 5;
             this.txtPquantityShow.Visible = false;
             // 
@@ -368,10 +354,9 @@
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblQuantity.Location = new System.Drawing.Point(31, 435);
-            this.lblQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblQuantity.Location = new System.Drawing.Point(23, 353);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(99, 26);
+            this.lblQuantity.Size = new System.Drawing.Size(82, 22);
             this.lblQuantity.TabIndex = 4;
             this.lblQuantity.Text = "In Stock";
             this.lblQuantity.Visible = false;
@@ -381,10 +366,9 @@
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPrice.Location = new System.Drawing.Point(31, 390);
-            this.lblPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrice.Location = new System.Drawing.Point(23, 317);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(67, 26);
+            this.lblPrice.Size = new System.Drawing.Size(56, 22);
             this.lblPrice.TabIndex = 2;
             this.lblPrice.Text = "Price";
             this.lblPrice.Visible = false;
@@ -394,10 +378,9 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblName.Location = new System.Drawing.Point(31, 347);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Location = new System.Drawing.Point(23, 282);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(75, 26);
+            this.lblName.Size = new System.Drawing.Size(61, 22);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
             this.lblName.Visible = false;
@@ -414,12 +397,13 @@
             this.Price,
             this.Quantity,
             this.TotalPrice});
-            this.gridSaleEntry.Location = new System.Drawing.Point(313, 90);
+            this.gridSaleEntry.Location = new System.Drawing.Point(235, 73);
+            this.gridSaleEntry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridSaleEntry.Name = "gridSaleEntry";
             this.gridSaleEntry.ReadOnly = true;
             this.gridSaleEntry.RowHeadersWidth = 51;
             this.gridSaleEntry.RowTemplate.Height = 24;
-            this.gridSaleEntry.Size = new System.Drawing.Size(819, 360);
+            this.gridSaleEntry.Size = new System.Drawing.Size(614, 292);
             this.gridSaleEntry.TabIndex = 10;
             // 
             // ProduceCode
@@ -466,10 +450,9 @@
             // 
             this.btnSave.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.btnSave.Location = new System.Drawing.Point(966, 535);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Location = new System.Drawing.Point(724, 435);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(137, 46);
+            this.btnSave.Size = new System.Drawing.Size(103, 37);
             this.btnSave.TabIndex = 11;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -480,18 +463,20 @@
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel3.Controls.Add(this.txtGrandTotal);
             this.panel3.Controls.Add(this.lblGrandTotal);
-            this.panel3.Location = new System.Drawing.Point(313, 441);
+            this.panel3.Location = new System.Drawing.Point(235, 358);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(819, 72);
+            this.panel3.Size = new System.Drawing.Size(614, 58);
             this.panel3.TabIndex = 12;
             // 
             // txtGrandTotal
             // 
             this.txtGrandTotal.Enabled = false;
             this.txtGrandTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtGrandTotal.Location = new System.Drawing.Point(684, 19);
+            this.txtGrandTotal.Location = new System.Drawing.Point(513, 15);
+            this.txtGrandTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtGrandTotal.Name = "txtGrandTotal";
-            this.txtGrandTotal.Size = new System.Drawing.Size(114, 27);
+            this.txtGrandTotal.Size = new System.Drawing.Size(86, 23);
             this.txtGrandTotal.TabIndex = 16;
             this.txtGrandTotal.Visible = false;
             // 
@@ -500,27 +485,25 @@
             this.lblGrandTotal.AutoSize = true;
             this.lblGrandTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGrandTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblGrandTotal.Location = new System.Drawing.Point(542, 22);
-            this.lblGrandTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGrandTotal.Location = new System.Drawing.Point(406, 18);
             this.lblGrandTotal.Name = "lblGrandTotal";
-            this.lblGrandTotal.Size = new System.Drawing.Size(126, 20);
+            this.lblGrandTotal.Size = new System.Drawing.Size(110, 17);
             this.lblGrandTotal.TabIndex = 15;
             this.lblGrandTotal.Text = "Grand Total : ";
             this.lblGrandTotal.Visible = false;
             // 
             // SaleEntryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1132, 594);
+            this.ClientSize = new System.Drawing.Size(849, 483);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.gridSaleEntry);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBackfromSE);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SaleEntryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sale Entry";
