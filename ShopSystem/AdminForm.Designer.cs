@@ -68,7 +68,7 @@
             this.pnlMenue.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenue.Location = new System.Drawing.Point(0, 0);
             this.pnlMenue.Name = "pnlMenue";
-            this.pnlMenue.Size = new System.Drawing.Size(214, 453);
+            this.pnlMenue.Size = new System.Drawing.Size(214, 450);
             this.pnlMenue.TabIndex = 0;
             this.pnlMenue.Visible = false;
             // 
@@ -79,7 +79,7 @@
             this.panel2.Controls.Add(this.menuStrip2);
             this.panel2.Controls.Add(this.menuStrip4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 68);
+            this.panel2.Location = new System.Drawing.Point(0, 65);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(214, 385);
             this.panel2.TabIndex = 1;
@@ -221,7 +221,7 @@
             // 
             this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnBack.Location = new System.Drawing.Point(492, 11);
+            this.btnBack.Location = new System.Drawing.Point(462, 11);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(112, 42);
             this.btnBack.TabIndex = 1;
@@ -237,7 +237,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(214, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(616, 112);
+            this.panel3.Size = new System.Drawing.Size(586, 112);
             this.panel3.TabIndex = 2;
             // 
             // btnShowMenue
@@ -268,9 +268,9 @@
             this.panel4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(214, 111);
+            this.panel4.Location = new System.Drawing.Point(214, 108);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(616, 342);
+            this.panel4.Size = new System.Drawing.Size(586, 342);
             this.panel4.TabIndex = 3;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -282,7 +282,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 277);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(616, 65);
+            this.panel1.Size = new System.Drawing.Size(586, 65);
             this.panel1.TabIndex = 2;
             // 
             // linklblUserName
@@ -302,11 +302,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 453);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlMenue);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "AdminForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Dashbord";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminForm_FormClosed);
             this.pnlMenue.ResumeLayout(false);
