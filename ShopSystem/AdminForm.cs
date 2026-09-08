@@ -42,13 +42,6 @@ namespace ShopSystem
 
         }
 
-        private void StackStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AllProductListForm stc= new AllProductListForm();
-            stc.Show();
-            this.Visible = false;
-        }
-
         private void salePunchStripMenuItem_Click(object sender, EventArgs e)
         {
             SaleEntryForm se= new SaleEntryForm();
@@ -126,14 +119,16 @@ namespace ShopSystem
 
         private void allProductListStripMenuItem_Click(object sender, EventArgs e)
         {
-            AllProductListForm allProductList = new AllProductListForm();
+            AllProductsListForm allProductList = new AllProductsListForm();
             allProductList.Show();
+            this.Visible=false;
         }
 
         private void productUpdateStripMenuItem_Click(object sender, EventArgs e)
         {
             ProductUpdateForm productUpdate = new ProductUpdateForm();
             productUpdate.Show();
+            this.Visible = false;
         }
     }
 }
