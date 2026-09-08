@@ -162,6 +162,7 @@
             this.Column1.DataPropertyName = "Code";
             this.Column1.HeaderText = "Code";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
@@ -169,6 +170,7 @@
             this.Column2.DataPropertyName = "Name";
             this.Column2.HeaderText = "Name";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
@@ -176,6 +178,7 @@
             this.Column3.DataPropertyName = "Price";
             this.Column3.HeaderText = "Price";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
@@ -183,6 +186,7 @@
             this.Column4.DataPropertyName = "Quantity";
             this.Column4.HeaderText = "Quantity";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // AllProductsListForm
             // 
@@ -192,7 +196,10 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "AllProductsListForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "All Products List";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AllProductsListForm_FormClosed);
             this.panel1.ResumeLayout(false);
