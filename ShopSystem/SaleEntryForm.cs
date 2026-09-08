@@ -46,7 +46,7 @@ namespace ShopSystem
 
                     if (dt.Rows.Count > 0)
                     {
-                        lblDetails.Show();
+                        //lblDetails.Show();
                         lblcode.Show();
                         lblName.Show();
                         lblPrice.Show();
@@ -228,7 +228,7 @@ namespace ShopSystem
                 this.lblQuantity.Hide();
                 this.lblPrice.Hide();
                 this.lblName.Hide();
-                this.lblDetails.Hide();
+                //this.lblDetails.Hide();
 
                 this.txtGrandTotal.Hide();
                 this.txtPcodeShow.Hide();
