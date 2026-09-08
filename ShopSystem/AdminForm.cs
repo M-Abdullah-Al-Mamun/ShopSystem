@@ -123,12 +123,5 @@ namespace ShopSystem
             allProductList.Show();
             this.Visible=false;
         }
-
-        private void productUpdateStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ProductUpdateForm productUpdate = new ProductUpdateForm();
-            productUpdate.Show();
-            this.Visible = false;
-        }
     }
 }
