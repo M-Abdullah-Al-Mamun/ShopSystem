@@ -46,14 +46,14 @@ namespace ShopSystem
         {
             SaleEntryForm se= new SaleEntryForm();
             se.Show();
-            this.Visible = false;
+            //this.Visible = false;
         }
 
         private void saleSummaryStripMenuItem_Click(object sender, EventArgs e)
         {
             SaleSummaryForm ss= new SaleSummaryForm();
             ss.Show();
-            this.Visible = false;
+            //this.Visible = false;
 
         }
 
@@ -121,7 +121,7 @@ namespace ShopSystem
         {
             AllProductsListForm allProductList = new AllProductsListForm();
             allProductList.Show();
-            this.Visible=false;
+            //this.Visible=false;
         }
     }
 }
