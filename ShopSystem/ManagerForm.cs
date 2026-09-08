@@ -13,10 +13,17 @@ namespace ShopSystem
 {
     public partial class ManagerForm : Form
     {
+        private string UserName { get; set; }
         public ManagerForm()
         {
             InitializeComponent();
         }
+        public ManagerForm(string username ):this()
+        {
+            this.UserName = username;
+            this.lblManagerUsername.Text = username;
+        }
+        
 
         private void btnShowData_Click(object sender, EventArgs e)
         {
@@ -28,30 +35,12 @@ namespace ShopSystem
 
             try
             {
-                //SqlConnection con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=TestDatabase;Integrated Security=True;Encrypt=False");
-                //con.Open();
-                //var query = "Select * from Product";
-                //SqlCommand cmd = new SqlCommand(query, con);
-                //SqlDataAdapter adp = new SqlDataAdapter(cmd);
-                //DataSet ds = new DataSet();
-                //adp.Fill(ds);
-                //DataTable dt = ds.Tables[0];
-
-
-
-
-                //gridShowData.DataSource = dt;
-                //gridShowData.Refresh();
-
                 ForDatabaseShortcutClass db = new ForDatabaseShortcutClass();
                 gridShowData.DataSource = db.ExecuteQueryTable("SELECT * FROM ProductInfoTable");
-
-
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error occurred while fetching data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error :\n " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -60,24 +49,12 @@ namespace ShopSystem
             string search = txtSearch.Text;
             try
             {
-                //SqlConnection con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=TestDatabase;Integrated Security=True;Encrypt=False");
-                //con.Open();
-                //var query = $"Select * from Product where Productname like '%{search}%'";
-                //SqlCommand cmd = new SqlCommand(query, con);
-                //SqlDataAdapter adp = new SqlDataAdapter(cmd);
-                //DataSet ds = new DataSet();
-                //adp.Fill(ds);
-                //DataTable dt = ds.Tables[0];
-
-                //gridShowData.DataSource = dt;
-                //gridShowData.Refresh();
-
                 ForDatabaseShortcutClass db = new ForDatabaseShortcutClass();
                 gridShowData.DataSource = db.ExecuteQueryTable($"SELECT * FROM ProductInfoTable WHERE Name LIKE '%{search}%'");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error occurred while fetching data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error :\n " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -89,25 +66,13 @@ namespace ShopSystem
 
             try
             {
-                //SqlConnection con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=TestDatabase;Integrated Security=True;Encrypt=False");
-                //con.Open();
-                //var query = "Select * from Product";
-                //SqlCommand cmd = new SqlCommand(query, con);
-                //SqlDataAdapter adp = new SqlDataAdapter(cmd);
-                //DataSet ds = new DataSet();
-                //adp.Fill(ds);
-                //DataTable dt = ds.Tables[0];
-
-                //gridShowData.DataSource = dt;
-                //gridShowData.Refresh();
-
                 ForDatabaseShortcutClass db = new ForDatabaseShortcutClass();
                 gridShowData.DataSource = db.ExecuteQueryTable("SELECT * FROM ProductInfoTable");
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error occurred while fetching data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error :\n " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

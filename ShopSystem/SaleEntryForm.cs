@@ -9,6 +9,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace ShopSystem
 {
@@ -38,41 +39,6 @@ namespace ShopSystem
             {
                if (!string.IsNullOrEmpty(search))
                 {
-                    //SqlConnection con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=TestDatabase;Integrated Security=True;Encrypt=False");
-                    //con.Open();
-                    //var query = $"Select * from Product where Productcode = '{search}'";
-                    //SqlCommand cmd = new SqlCommand(query, con);
-                    //SqlDataAdapter adp = new SqlDataAdapter(cmd);
-                    //DataSet ds = new DataSet();
-                    //adp.Fill(ds);
-                    //DataTable dt = ds.Tables[0];
-                    //SqlDataReader reader = cmd.ExecuteReader();
-
-
-
-
-
-                    //if (reader.Read())
-                    //{
-                    //    lblDetails.Show();
-
-                    //    lblcode.Show();
-                    //    lblName.Show();
-                    //    lblPrice.Show();
-                    //    lblQuantity.Show();
-
-                    //    txtPcodeShow.Show();
-                    //    txtPnameShow.Show();
-                    //    txtPpriceShow.Show();
-                    //    txtPquantityShow.Show();
-
-                    //    txtPcodeShow.Text = reader["Productcode"].ToString();
-                    //    txtPnameShow.Text = reader["Productname"].ToString();
-                    //    txtPpriceShow.Text = reader["Price"].ToString();
-                    //    txtPquantityShow.Text = reader["Quantity"].ToString();
-
-                    //   this.btnAdd.Enabled = true;
-                    //   this.txtAddedQuantity.Enabled = true;
 
                     ForDatabaseShortcutClass db = new ForDatabaseShortcutClass();
 
@@ -81,12 +47,10 @@ namespace ShopSystem
                     if (dt.Rows.Count > 0)
                     {
                         lblDetails.Show();
-
                         lblcode.Show();
                         lblName.Show();
                         lblPrice.Show();
                         lblQuantity.Show();
-
                         txtPcodeShow.Show();
                         txtPnameShow.Show();
                         txtPpriceShow.Show();
@@ -116,49 +80,70 @@ namespace ShopSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error occurred while fetching data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error :\n " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
+            string inputQuantity = this.txtAddedQuantity.Text;
+            string availableQuantity = this.txtPquantityShow.Text;
+
             try
             {
-                if (!string.IsNullOrEmpty(this.txtAddedQuantity.Text))
+                if (!string.IsNullOrEmpty(inputQuantity))
                 {
-                    if (Convert.ToDecimal(this.txtAddedQuantity.Text) > Convert.ToDecimal(this.txtPquantityShow.Text))
+                    if (Convert.ToDecimal(inputQuantity) > Convert.ToDecimal(availableQuantity))
                     {
-                        MessageBox.Show("Not enough quantity available in stock.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Not enough quantity available in stock.", "Invalid ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
+
                     else
-                    { string quantity = this.txtAddedQuantity.Text;
+                    {
+                        //Creating a new row and adding it to the DataGridView
+
+                        string productCode = this.txtPcodeShow.Text;
+                        string productName = this.txtPnameShow.Text;
+                        decimal price = Convert.ToDecimal(txtPpriceShow.Text);
+                        decimal quantity = Convert.ToDecimal(txtAddedQuantity.Text);
+                        string totalPrice = (price * quantity).ToString();
+
+                        gridSaleEntry.Rows.Add(productCode, productName, price,quantity,totalPrice);
 
 
-                        DataGridViewRow newrow = new DataGridViewRow();
-
-                        DataGridViewCell cell1 = new DataGridViewTextBoxCell();
-                        cell1.Value = this.txtPcodeShow.Text;
-                        newrow.Cells.Add(cell1);
-                        DataGridViewCell cell2 = new DataGridViewTextBoxCell();
-                        cell2.Value = this.txtPnameShow.Text;
-                        newrow.Cells.Add(cell2);
-                        DataGridViewCell cell3 = new DataGridViewTextBoxCell();
-                        cell3.Value = this.txtPpriceShow.Text;
-                        newrow.Cells.Add(cell3);
-                        DataGridViewCell cell4 = new DataGridViewTextBoxCell();
-                        cell4.Value = this.txtAddedQuantity.Text;
-                        newrow.Cells.Add(cell4);
-                        DataGridViewCell cell5 = new DataGridViewTextBoxCell();
-                        cell5.Value = Convert.ToDecimal(quantity) * Convert.ToDecimal(this.txtPpriceShow.Text);
-                        newrow.Cells.Add(cell5);
-
-                        gridSaleEntry.Rows.Add(newrow);
+                        //Adding the Grand total from all the rows-
 
 
-                        this.txtGrandTotal.Text = (from DataGridViewRow row in gridSaleEntry.Rows
-                                                   where row.Cells[4].FormattedValue.ToString() != string.Empty
-                                                   select Convert.ToDecimal(row.Cells[4].FormattedValue)).Sum().ToString();
+                        decimal grandTotal = 0;
+
+                        foreach (DataGridViewRow row in gridSaleEntry.Rows)
+                        {
+                            if (row.Cells[4].Value != null)
+                            {
+                                grandTotal += Convert.ToDecimal(row.Cells[4].Value);
+                            }
+                        }
+
+                        this.txtGrandTotal.Text = grandTotal.ToString();
+
+
+                        //Adding the total Quantity sold for the SaleSummaryForm from all the rows-
+
+
+                        decimal totalQuantitySold = 0;
+
+                        foreach (DataGridViewRow row in gridSaleEntry.Rows)
+                        {
+                            if (row.Cells[3].Value != null)
+                            {
+                                totalQuantitySold += Convert.ToDecimal(row.Cells[3].Value);
+                            }
+                        }
+
+                        txtTotalQuantitySold.Text = totalQuantitySold.ToString();
+
+
+
                         this.lblGrandTotal.Show();
                         this.txtGrandTotal.Show();
 
@@ -180,7 +165,7 @@ namespace ShopSystem
 
             catch (Exception ex)
             {
-                MessageBox.Show("Error occurred while adding product: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error :\n " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -191,80 +176,7 @@ namespace ShopSystem
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //string productCode = this.txtPcodeShow.Text;
-            //string existingQuantity = this.txtPquantityShow.Text;
-            //decimal updatedQuantity = Convert.ToDecimal(existingQuantity) - Convert.ToDecimal(this.txtAddedQuantity.Text);
-
-            //SqlConnection con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=TestDatabase;Integrated Security=True;Encrypt=False");
-
-            //try
-            //{
-            //    // Open the database connection
-            //    con.Open();
-
-
-            //    // Go through every row in the grid
-            //    foreach (DataGridViewRow row in gridSaleEntry.Rows)
-            //    {
-            //        // Make sure the row contains a product
-            //        if (row.Cells[0].Value != null)
-            //        {
-            //            // Get the ProductCode from the grid
-            //            string productCode = row.Cells[0].Value.ToString();
-
-
-            //            // Get the quantity sold from the grid
-            //            decimal quantitySold = Convert.ToDecimal(row.Cells[3].Value);
-
-
-            //            // SQL query
-            //            string query = $"Update Product Set Quantity = Quantity - {quantitySold} Where Productcode = '{productCode}' ";
-
-            //            // Create the SQL command
-            //            SqlCommand cmd = new SqlCommand(query, con);
-
-
-            //            // Give the values to SQL
-            //            cmd.Parameters.AddWithValue($"{quantitySold}", quantitySold);
-            //            cmd.Parameters.AddWithValue($"{productCode}", productCode);
-
-
-            //            // Run the UPDATE query
-            //            cmd.ExecuteNonQuery();
-
-
-            //            this.gridSaleEntry.Rows.Clear();
-            //            this.txtPcodeSaleEntrySearch.Clear();
-            //            this.txtAddedQuantity.Text = "";
-
-            //            this.lblGrandTotal.Hide();
-            //            this.lblcode.Hide();
-            //            this.lblQuantity.Hide();
-            //            this.lblPrice.Hide();
-            //            this.lblName.Hide();
-            //            this.lblQuantity.Hide();
-            //            this.lblDetails.Hide();
-
-            //            this.txtGrandTotal.Hide();
-            //            this.txtPcodeShow.Hide();
-            //            this.txtPnameShow.Hide();
-            //            this.txtPquantityShow.Hide();
-            //            this.txtPpriceShow.Hide();
-
-            //        }
-
-            //    }
-
-
-            //    con.Close();
-
-            //    MessageBox.Show("Sale saved successfully.","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error: " + ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            //}
-
+         
             try
             {
                 ForDatabaseShortcutClass db = new ForDatabaseShortcutClass();
@@ -274,11 +186,38 @@ namespace ShopSystem
                     if (row.Cells[0].Value != null)
                     {
                         string productCode = row.Cells[0].Value.ToString();
-                        string quantitySold = (row.Cells[3].Value.ToString());
+                        decimal quantitySold = Convert.ToDecimal(row.Cells[3].Value);
 
                         db.ExecuteDMLQuery($"Update ProductInfoTable Set Quantity = Quantity - {quantitySold} Where Code = '{productCode}'");
                     }
                 }
+
+
+                try
+                {
+                    Random random = new Random();
+
+                    int id = random.Next(1000, 9999);
+
+
+
+                    string TotalQuantitysAddtoDb = txtTotalQuantitySold.Text;
+
+                    string Query = $"Insert into SaleSummaryTable (SalesId, SalesDateandTime, SalesQuantity, TotalSalesAmount) VALUES ({id}, GETDATE(),'{TotalQuantitysAddtoDb}','{txtGrandTotal.Text}')";
+
+                    ForDatabaseShortcutClass dbinsert = new ForDatabaseShortcutClass();
+
+                    dbinsert.ExecuteDMLQuery(Query);
+
+                   
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error while inserting into SaleSummaryTable:\n " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
 
                 this.gridSaleEntry.Rows.Clear();
                 this.txtPcodeSaleEntrySearch.Clear();
@@ -297,11 +236,11 @@ namespace ShopSystem
                 this.txtPquantityShow.Hide();
                 this.txtPpriceShow.Hide();
 
-                MessageBox.Show("Sale saved successfully.","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Sale saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Error :\n " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

@@ -57,6 +57,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtGrandTotal = new System.Windows.Forms.TextBox();
             this.lblGrandTotal = new System.Windows.Forms.Label();
+            this.txtTotalQuantitySold = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSaleEntry)).BeginInit();
@@ -233,7 +234,6 @@
             this.txtAddedQuantity.Name = "txtAddedQuantity";
             this.txtAddedQuantity.Size = new System.Drawing.Size(220, 28);
             this.txtAddedQuantity.TabIndex = 15;
-            this.txtAddedQuantity.SelectedIndexChanged += new System.EventHandler(this.txtAddedQuantity_SelectedIndexChanged);
             // 
             // lblDetails
             // 
@@ -449,7 +449,7 @@
             // Quantity
             // 
             this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.HeaderText = "Quantity Selected";
             this.Quantity.MinimumWidth = 6;
             this.Quantity.Name = "Quantity";
             this.Quantity.ReadOnly = true;
@@ -457,7 +457,7 @@
             // TotalPrice
             // 
             this.TotalPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TotalPrice.HeaderText = "TotalPrice";
+            this.TotalPrice.HeaderText = "Total Price";
             this.TotalPrice.MinimumWidth = 6;
             this.TotalPrice.Name = "TotalPrice";
             this.TotalPrice.ReadOnly = true;
@@ -478,6 +478,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel3.Controls.Add(this.txtTotalQuantitySold);
             this.panel3.Controls.Add(this.txtGrandTotal);
             this.panel3.Controls.Add(this.lblGrandTotal);
             this.panel3.Location = new System.Drawing.Point(313, 441);
@@ -507,6 +508,16 @@
             this.lblGrandTotal.TabIndex = 15;
             this.lblGrandTotal.Text = "Grand Total : ";
             this.lblGrandTotal.Visible = false;
+            // 
+            // txtTotalQuantitySold
+            // 
+            this.txtTotalQuantitySold.Enabled = false;
+            this.txtTotalQuantitySold.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtTotalQuantitySold.Location = new System.Drawing.Point(795, 19);
+            this.txtTotalQuantitySold.Name = "txtTotalQuantitySold";
+            this.txtTotalQuantitySold.Size = new System.Drawing.Size(24, 27);
+            this.txtTotalQuantitySold.TabIndex = 17;
+            this.txtTotalQuantitySold.Visible = false;
             // 
             // SaleEntryForm
             // 
@@ -557,14 +568,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label lblDetails;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblGrandTotal;
+        private System.Windows.Forms.TextBox txtGrandTotal;
+        private System.Windows.Forms.ComboBox txtAddedQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProduceCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProduceName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalPrice;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lblGrandTotal;
-        private System.Windows.Forms.TextBox txtGrandTotal;
-        private System.Windows.Forms.ComboBox txtAddedQuantity;
+        private System.Windows.Forms.TextBox txtTotalQuantitySold;
     }
 }
