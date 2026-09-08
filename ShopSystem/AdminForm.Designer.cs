@@ -33,7 +33,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.masterSetupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productEntryStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productUpdateStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.allProductListStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.saleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -102,7 +101,6 @@
             this.masterSetupToolStripMenuItem.BackColor = System.Drawing.Color.MidnightBlue;
             this.masterSetupToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.productEntryStripMenuItem,
-            this.productUpdateStripMenuItem,
             this.allProductListStripMenuItem});
             this.masterSetupToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.masterSetupToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -114,21 +112,14 @@
             // productEntryStripMenuItem
             // 
             this.productEntryStripMenuItem.Name = "productEntryStripMenuItem";
-            this.productEntryStripMenuItem.Size = new System.Drawing.Size(254, 36);
+            this.productEntryStripMenuItem.Size = new System.Drawing.Size(246, 36);
             this.productEntryStripMenuItem.Text = "Product Entry";
             this.productEntryStripMenuItem.Click += new System.EventHandler(this.productEntryStripMenuItem_Click);
-            // 
-            // productUpdateStripMenuItem
-            // 
-            this.productUpdateStripMenuItem.Name = "productUpdateStripMenuItem";
-            this.productUpdateStripMenuItem.Size = new System.Drawing.Size(254, 36);
-            this.productUpdateStripMenuItem.Text = "Product Update";
-            this.productUpdateStripMenuItem.Click += new System.EventHandler(this.productUpdateStripMenuItem_Click);
             // 
             // allProductListStripMenuItem
             // 
             this.allProductListStripMenuItem.Name = "allProductListStripMenuItem";
-            this.allProductListStripMenuItem.Size = new System.Drawing.Size(254, 36);
+            this.allProductListStripMenuItem.Size = new System.Drawing.Size(246, 36);
             this.allProductListStripMenuItem.Text = "All Product List";
             this.allProductListStripMenuItem.Click += new System.EventHandler(this.allProductListStripMenuItem_Click);
             // 
@@ -345,7 +336,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem masterSetupToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productEntryStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productUpdateStripMenuItem;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem saleToolStripMenuItem;
