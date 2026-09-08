@@ -31,8 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSaleProduct = new System.Windows.Forms.Button();
             this.btnProductList = new System.Windows.Forms.Button();
+            this.btnSaleProduct = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -75,6 +75,18 @@
             this.panel2.Size = new System.Drawing.Size(191, 341);
             this.panel2.TabIndex = 1;
             // 
+            // btnProductList
+            // 
+            this.btnProductList.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnProductList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnProductList.Location = new System.Drawing.Point(28, 96);
+            this.btnProductList.Name = "btnProductList";
+            this.btnProductList.Size = new System.Drawing.Size(117, 56);
+            this.btnProductList.TabIndex = 1;
+            this.btnProductList.Text = "Product List";
+            this.btnProductList.UseVisualStyleBackColor = false;
+            this.btnProductList.Click += new System.EventHandler(this.btnProductList_Click);
+            // 
             // btnSaleProduct
             // 
             this.btnSaleProduct.BackColor = System.Drawing.Color.DodgerBlue;
@@ -87,18 +99,6 @@
             this.btnSaleProduct.Text = "Sale Product";
             this.btnSaleProduct.UseVisualStyleBackColor = false;
             this.btnSaleProduct.Click += new System.EventHandler(this.btnSaleProduct_Click);
-            // 
-            // btnProductList
-            // 
-            this.btnProductList.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnProductList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnProductList.Location = new System.Drawing.Point(28, 96);
-            this.btnProductList.Name = "btnProductList";
-            this.btnProductList.Size = new System.Drawing.Size(117, 56);
-            this.btnProductList.TabIndex = 1;
-            this.btnProductList.Text = "Product List";
-            this.btnProductList.UseVisualStyleBackColor = false;
-            this.btnProductList.Click += new System.EventHandler(this.btnProductList_Click);
             // 
             // panel3
             // 
@@ -131,7 +131,10 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "SalesManForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sales Man Form";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SalesManForm_FormClosed);
             this.panel1.ResumeLayout(false);
