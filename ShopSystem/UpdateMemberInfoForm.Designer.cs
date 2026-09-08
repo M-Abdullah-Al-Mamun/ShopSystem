@@ -231,7 +231,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "UpdateMemberInfoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Member Info";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UpdateMemberInfoForm_FormClosed);
             this.panel1.ResumeLayout(false);
