@@ -103,7 +103,7 @@
             // 
             this.btnBackfromSS.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnBackfromSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnBackfromSS.Location = new System.Drawing.Point(685, 315);
+            this.btnBackfromSS.Location = new System.Drawing.Point(676, 306);
             this.btnBackfromSS.Name = "btnBackfromSS";
             this.btnBackfromSS.Size = new System.Drawing.Size(112, 42);
             this.btnBackfromSS.TabIndex = 2;
