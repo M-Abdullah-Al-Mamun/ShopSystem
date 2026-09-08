@@ -60,6 +60,12 @@
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllProductsListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllProductsListForm.Designer.cs">
+      <DependentUpon>AllProductsListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ForDatabaseShortcutClass.cs" />
     <Compile Include="ManagerForm.cs">
       <SubType>Form</SubType>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllProductsListForm.resx">
+      <DependentUpon>AllProductsListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerForm.resx" />
     <EmbeddedResource Include="ProductEntryForm.resx">
