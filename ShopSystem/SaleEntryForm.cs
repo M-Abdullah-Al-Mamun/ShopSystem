@@ -235,8 +235,22 @@ namespace ShopSystem
                 this.txtPnameShow.Hide();
                 this.txtPquantityShow.Hide();
                 this.txtPpriceShow.Hide();
+                this.txtDiscount.Hide();
+                this.txtTotalAfterDiscount.Hide();
 
-                MessageBox.Show("Sale saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               
+                double payment = Convert.ToDouble(txtPayment.Text);
+                double bill = Convert.ToDouble(txtTotalAfterDiscount.Text);          
+                if (payment < bill)
+                {
+                    MessageBox.Show("Payment is not enough!");
+                }
+                else
+                {
+                    MessageBox.Show("Produt Salled Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                
             }
             catch (Exception ex)
             {
@@ -248,6 +262,26 @@ namespace ShopSystem
         private void txtGrandTotal_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtDiscount_TextChanged(object sender, EventArgs e)
+        {
+            double total = Convert.ToDouble(txtGrandTotal.Text);
+            double dicount=Convert.ToDouble(txtDiscount.Text);
+
+            double billTotal = total - dicount;
+
+            txtTotalAfterDiscount.Text= billTotal.ToString();
+        }
+
+        private void txtPayment_TextChanged(object sender, EventArgs e)
+        {
+            double payment = Convert.ToDouble(txtPayment.Text);
+            double bill = Convert.ToDouble(txtTotalAfterDiscount.Text);
+
+            double exchange = payment - bill;
+
+            txtExchange.Text = exchange.ToString();
         }
     }
 }
