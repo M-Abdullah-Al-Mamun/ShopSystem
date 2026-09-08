@@ -73,6 +73,11 @@
     <Compile Include="ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerForm1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManagerForm.resx</DependentUpon>
+    </Compile>
     <Compile Include="ProductEntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +89,11 @@
     </Compile>
     <Compile Include="SaleEntryForm.Designer.cs">
       <DependentUpon>SaleEntryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaleEntryForm1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaleEntryForm.resx</DependentUpon>
     </Compile>
     <Compile Include="SaleSummaryForm.cs">
       <SubType>Form</SubType>
@@ -114,7 +124,10 @@
     <EmbeddedResource Include="AllProductsListForm.resx">
       <DependentUpon>AllProductsListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagerForm.resx" />
+    <EmbeddedResource Include="ManagerForm.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManagerForm1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProductEntryForm.resx">
       <DependentUpon>ProductEntryForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,7 +143,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SaleEntryForm.resx" />
+    <EmbeddedResource Include="SaleEntryForm.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SaleEntryForm1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="SaleSummaryForm.resx">
       <DependentUpon>SaleSummaryForm.cs</DependentUpon>
     </EmbeddedResource>
