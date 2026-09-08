@@ -24,7 +24,9 @@ namespace ShopSystem
 
         private void btnBackfromPE_Click(object sender, EventArgs e)
         {
-
+            AdminForm ad=new AdminForm();
+            ad.Show();
+            this.Visible = false;
         }
     }
 }
