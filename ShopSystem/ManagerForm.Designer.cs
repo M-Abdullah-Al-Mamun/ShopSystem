@@ -61,7 +61,7 @@
             this.btnSaleEntry.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnSaleEntry.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSaleEntry.Location = new System.Drawing.Point(0, 182);
-            this.btnSaleEntry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSaleEntry.Margin = new System.Windows.Forms.Padding(2);
             this.btnSaleEntry.Name = "btnSaleEntry";
             this.btnSaleEntry.Size = new System.Drawing.Size(121, 62);
             this.btnSaleEntry.TabIndex = 12;
@@ -75,7 +75,7 @@
             this.btnShowData.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnShowData.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnShowData.Location = new System.Drawing.Point(0, 119);
-            this.btnShowData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnShowData.Margin = new System.Windows.Forms.Padding(2);
             this.btnShowData.Name = "btnShowData";
             this.btnShowData.Size = new System.Drawing.Size(121, 59);
             this.btnShowData.TabIndex = 11;
@@ -89,7 +89,7 @@
             this.btnSaleSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnSaleSummary.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSaleSummary.Location = new System.Drawing.Point(0, 248);
-            this.btnSaleSummary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSaleSummary.Margin = new System.Windows.Forms.Padding(2);
             this.btnSaleSummary.Name = "btnSaleSummary";
             this.btnSaleSummary.Size = new System.Drawing.Size(121, 60);
             this.btnSaleSummary.TabIndex = 13;
@@ -102,7 +102,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(246, 368);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(70, 27);
             this.btnSearch.TabIndex = 11;
@@ -123,7 +123,7 @@
             this.Quantity});
             this.gridShowData.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.gridShowData.Location = new System.Drawing.Point(0, -1);
-            this.gridShowData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridShowData.Margin = new System.Windows.Forms.Padding(2);
             this.gridShowData.Name = "gridShowData";
             this.gridShowData.ReadOnly = true;
             this.gridShowData.RowHeadersWidth = 51;
@@ -172,7 +172,7 @@
             this.txtExit.BackColor = System.Drawing.Color.Red;
             this.txtExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExit.Location = new System.Drawing.Point(764, 4);
-            this.txtExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtExit.Margin = new System.Windows.Forms.Padding(2);
             this.txtExit.Name = "txtExit";
             this.txtExit.Size = new System.Drawing.Size(68, 26);
             this.txtExit.TabIndex = 8;
@@ -185,7 +185,7 @@
             this.btnout.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnout.Location = new System.Drawing.Point(692, 4);
-            this.btnout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnout.Margin = new System.Windows.Forms.Padding(2);
             this.btnout.Name = "btnout";
             this.btnout.Size = new System.Drawing.Size(68, 26);
             this.btnout.TabIndex = 7;
@@ -196,7 +196,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(9, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(26, 19);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -224,7 +224,7 @@
             this.panel2.Controls.Add(this.lblManagerUsername);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 486);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(841, 36);
             this.panel2.TabIndex = 9;
@@ -233,7 +233,7 @@
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(128, 369);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(114, 21);
             this.txtSearch.TabIndex = 13;
@@ -259,7 +259,7 @@
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.MenuText;
             this.btnRefresh.Location = new System.Drawing.Point(751, 28);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(81, 33);
             this.btnRefresh.TabIndex = 8;
@@ -288,7 +288,7 @@
             this.panel3.Controls.Add(this.txtSearch);
             this.panel3.Controls.Add(this.lblSearch);
             this.panel3.Location = new System.Drawing.Point(125, 89);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(716, 397);
             this.panel3.TabIndex = 10;
@@ -300,7 +300,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(841, 89);
             this.panel1.TabIndex = 8;
@@ -317,7 +317,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "ManagerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManagerForm";
