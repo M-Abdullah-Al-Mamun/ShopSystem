@@ -73,13 +73,6 @@
     <Compile Include="ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductUpdateForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include=".Designer.cs">
-      <DependentUpon>ProductUpdateForm.cs</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ProductEntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,9 +120,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProductUpdateForm.resx">
-      <DependentUpon>ProductUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
