@@ -35,6 +35,10 @@
             this.btnSaleSummary = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.gridShowData = new System.Windows.Forms.DataGridView();
+            this.Prdouctcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Productname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtExit = new System.Windows.Forms.Button();
             this.btnout = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -46,10 +50,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Prdouctcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Productname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridShowData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -126,6 +126,42 @@
             this.gridShowData.RowTemplate.Height = 24;
             this.gridShowData.Size = new System.Drawing.Size(954, 453);
             this.gridShowData.TabIndex = 0;
+            // 
+            // Prdouctcode
+            // 
+            this.Prdouctcode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Prdouctcode.DataPropertyName = "Code";
+            this.Prdouctcode.HeaderText = "Prdouct Code";
+            this.Prdouctcode.MinimumWidth = 6;
+            this.Prdouctcode.Name = "Prdouctcode";
+            this.Prdouctcode.ReadOnly = true;
+            // 
+            // Productname
+            // 
+            this.Productname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Productname.DataPropertyName = "Name";
+            this.Productname.HeaderText = "Prdouct Name";
+            this.Productname.MinimumWidth = 6;
+            this.Productname.Name = "Productname";
+            this.Productname.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Price.DataPropertyName = "Price";
+            this.Price.HeaderText = "Price";
+            this.Price.MinimumWidth = 6;
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
             // 
             // txtExit
             // 
@@ -222,7 +258,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(12, 36);
+            this.label3.Location = new System.Drawing.Point(13, 36);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(264, 41);
             this.label3.TabIndex = 7;
@@ -250,42 +286,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1121, 109);
             this.panel1.TabIndex = 8;
-            // 
-            // Prdouctcode
-            // 
-            this.Prdouctcode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Prdouctcode.DataPropertyName = "Code";
-            this.Prdouctcode.HeaderText = "Prdouct Code";
-            this.Prdouctcode.MinimumWidth = 6;
-            this.Prdouctcode.Name = "Prdouctcode";
-            this.Prdouctcode.ReadOnly = true;
-            // 
-            // Productname
-            // 
-            this.Productname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Productname.DataPropertyName = "Name";
-            this.Productname.HeaderText = "Prdouct Name";
-            this.Productname.MinimumWidth = 6;
-            this.Productname.Name = "Productname";
-            this.Productname.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Price.DataPropertyName = "Price";
-            this.Price.HeaderText = "Price";
-            this.Price.MinimumWidth = 6;
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Quantity.DataPropertyName = "Quantity";
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.MinimumWidth = 6;
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
             // 
             // ManagerForm
             // 
