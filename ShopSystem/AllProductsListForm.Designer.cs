@@ -139,6 +139,8 @@
             // 
             // dgvProductInfo
             // 
+            this.dgvProductInfo.AllowUserToAddRows = false;
+            this.dgvProductInfo.AllowUserToDeleteRows = false;
             this.dgvProductInfo.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dgvProductInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -149,30 +151,35 @@
             this.dgvProductInfo.Dock = System.Windows.Forms.DockStyle.Right;
             this.dgvProductInfo.Location = new System.Drawing.Point(3, 0);
             this.dgvProductInfo.Name = "dgvProductInfo";
+            this.dgvProductInfo.ReadOnly = true;
             this.dgvProductInfo.Size = new System.Drawing.Size(449, 357);
             this.dgvProductInfo.TabIndex = 0;
             this.dgvProductInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductInfo_CellContentClick);
             // 
             // Column1
             // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column1.DataPropertyName = "Code";
             this.Column1.HeaderText = "Code";
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column2.DataPropertyName = "Name";
             this.Column2.HeaderText = "Name";
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column3.DataPropertyName = "Price";
             this.Column3.HeaderText = "Price";
             this.Column3.Name = "Column3";
             // 
             // Column4
             // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column4.DataPropertyName = "Quantity";
             this.Column4.HeaderText = "Quantity";
             this.Column4.Name = "Column4";
