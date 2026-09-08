@@ -224,7 +224,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "AddMemberForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Member";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddMemberForm_FormClosed);
             this.panel1.ResumeLayout(false);
