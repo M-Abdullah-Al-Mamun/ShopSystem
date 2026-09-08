@@ -85,6 +85,12 @@
     <Compile Include="SaleEntryForm.Designer.cs">
       <DependentUpon>SaleEntryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SalesManForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesManForm.Designer.cs">
+      <DependentUpon>SalesManForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SaleSummaryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     <EmbeddedResource Include="AllProductsListForm.resx">
       <DependentUpon>AllProductsListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForm.resx">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProductEntryForm.resx">
       <DependentUpon>ProductEntryForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +138,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SaleEntryForm.resx">
+      <DependentUpon>SaleEntryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesManForm.resx">
+      <DependentUpon>SalesManForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SaleSummaryForm.resx">
       <DependentUpon>SaleSummaryForm.cs</DependentUpon>
     </EmbeddedResource>
