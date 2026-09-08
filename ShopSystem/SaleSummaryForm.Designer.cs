@@ -31,13 +31,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.gridSaleSummary = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnBackfromSE = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
             this.SalesId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SalesDateandTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Salesquantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalSelesAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnBackfromSE = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSaleSummary)).BeginInit();
             this.panel2.SuspendLayout();
@@ -45,13 +45,12 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Red;
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Controls.Add(this.label11);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1067, 103);
+            this.panel1.Size = new System.Drawing.Size(800, 84);
             this.panel1.TabIndex = 2;
             // 
             // label11
@@ -59,12 +58,11 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(13, 22);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(10, 18);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(232, 32);
+            this.label11.Size = new System.Drawing.Size(223, 26);
             this.label11.TabIndex = 8;
-            this.label11.Text = "Sale Dashboard";
+            this.label11.Text = "Sale Summary bord";
             // 
             // gridSaleSummary
             // 
@@ -77,50 +75,15 @@
             this.SalesDateandTime,
             this.Salesquantity,
             this.TotalSelesAmount});
-            this.gridSaleSummary.Location = new System.Drawing.Point(0, 103);
+            this.gridSaleSummary.Location = new System.Drawing.Point(0, 84);
+            this.gridSaleSummary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridSaleSummary.Name = "gridSaleSummary";
             this.gridSaleSummary.ReadOnly = true;
             this.gridSaleSummary.RowHeadersWidth = 51;
             this.gridSaleSummary.RowTemplate.Height = 24;
-            this.gridSaleSummary.Size = new System.Drawing.Size(1067, 407);
+            this.gridSaleSummary.Size = new System.Drawing.Size(800, 331);
             this.gridSaleSummary.TabIndex = 3;
             this.gridSaleSummary.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Blue;
-            this.panel2.Controls.Add(this.btnPrint);
-            this.panel2.Controls.Add(this.btnBackfromSE);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 506);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1067, 63);
-            this.panel2.TabIndex = 4;
-            // 
-            // btnBackfromSE
-            // 
-            this.btnBackfromSE.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBackfromSE.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.btnBackfromSE.Location = new System.Drawing.Point(771, 11);
-            this.btnBackfromSE.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBackfromSE.Name = "btnBackfromSE";
-            this.btnBackfromSE.Size = new System.Drawing.Size(137, 46);
-            this.btnBackfromSE.TabIndex = 8;
-            this.btnBackfromSE.Text = "Back";
-            this.btnBackfromSE.UseVisualStyleBackColor = false;
-            this.btnBackfromSE.Click += new System.EventHandler(this.btnBackfromSE_Click);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.btnPrint.Location = new System.Drawing.Point(919, 10);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(137, 46);
-            this.btnPrint.TabIndex = 9;
-            this.btnPrint.Text = "Print";
-            this.btnPrint.UseVisualStyleBackColor = true;
             // 
             // SalesId
             // 
@@ -158,15 +121,51 @@
             this.TotalSelesAmount.Name = "TotalSelesAmount";
             this.TotalSelesAmount.ReadOnly = true;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Navy;
+            this.panel2.Controls.Add(this.btnPrint);
+            this.panel2.Controls.Add(this.btnBackfromSE);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 411);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 51);
+            this.panel2.TabIndex = 4;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnPrint.Location = new System.Drawing.Point(689, 8);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(103, 37);
+            this.btnPrint.TabIndex = 9;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            // 
+            // btnBackfromSE
+            // 
+            this.btnBackfromSE.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBackfromSE.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnBackfromSE.Location = new System.Drawing.Point(578, 9);
+            this.btnBackfromSE.Name = "btnBackfromSE";
+            this.btnBackfromSE.Size = new System.Drawing.Size(103, 37);
+            this.btnBackfromSE.TabIndex = 8;
+            this.btnBackfromSE.Text = "Back";
+            this.btnBackfromSE.UseVisualStyleBackColor = false;
+            this.btnBackfromSE.Click += new System.EventHandler(this.btnBackfromSE_Click);
+            // 
             // SaleSummaryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 569);
+            this.ClientSize = new System.Drawing.Size(800, 462);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.gridSaleSummary);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "SaleSummaryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sale Summary";
