@@ -39,12 +39,10 @@
             this.saleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salePunchStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saleSummaryStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip3 = new System.Windows.Forms.MenuStrip();
-            this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.StackStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip4 = new System.Windows.Forms.MenuStrip();
             this.masterSetupToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.addMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.UpdateDeleteStripMenue = new System.Windows.Forms.ToolStripMenuItem();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnBack = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -53,12 +51,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.linklblUserName = new System.Windows.Forms.LinkLabel();
-            this.UpdateDeleteStripMenue = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlMenue.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
-            this.menuStrip3.SuspendLayout();
             this.menuStrip4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -82,7 +78,6 @@
             this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel2.Controls.Add(this.menuStrip1);
             this.panel2.Controls.Add(this.menuStrip2);
-            this.panel2.Controls.Add(this.menuStrip3);
             this.panel2.Controls.Add(this.menuStrip4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 68);
@@ -96,7 +91,7 @@
             this.menuStrip1.BackColor = System.Drawing.Color.MidnightBlue;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.masterSetupToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 120);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 80);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(214, 40);
             this.menuStrip1.TabIndex = 0;
@@ -128,19 +123,21 @@
             this.productUpdateStripMenuItem.Name = "productUpdateStripMenuItem";
             this.productUpdateStripMenuItem.Size = new System.Drawing.Size(254, 36);
             this.productUpdateStripMenuItem.Text = "Product Update";
+            this.productUpdateStripMenuItem.Click += new System.EventHandler(this.productUpdateStripMenuItem_Click);
             // 
             // allProductListStripMenuItem
             // 
             this.allProductListStripMenuItem.Name = "allProductListStripMenuItem";
             this.allProductListStripMenuItem.Size = new System.Drawing.Size(254, 36);
             this.allProductListStripMenuItem.Text = "All Product List";
+            this.allProductListStripMenuItem.Click += new System.EventHandler(this.allProductListStripMenuItem_Click);
             // 
             // menuStrip2
             // 
             this.menuStrip2.BackColor = System.Drawing.Color.MidnightBlue;
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saleToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 80);
+            this.menuStrip2.Location = new System.Drawing.Point(0, 40);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(214, 40);
             this.menuStrip2.TabIndex = 1;
@@ -157,6 +154,7 @@
             this.saleToolStripMenuItem.Name = "saleToolStripMenuItem";
             this.saleToolStripMenuItem.Size = new System.Drawing.Size(70, 36);
             this.saleToolStripMenuItem.Text = "Sale";
+            this.saleToolStripMenuItem.Click += new System.EventHandler(this.saleToolStripMenuItem_Click);
             // 
             // salePunchStripMenuItem
             // 
@@ -171,34 +169,6 @@
             this.saleSummaryStripMenuItem.Size = new System.Drawing.Size(240, 36);
             this.saleSummaryStripMenuItem.Text = "Sale Summary";
             this.saleSummaryStripMenuItem.Click += new System.EventHandler(this.saleSummaryStripMenuItem_Click);
-            // 
-            // menuStrip3
-            // 
-            this.menuStrip3.BackColor = System.Drawing.Color.MidnightBlue;
-            this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inventoryToolStripMenuItem});
-            this.menuStrip3.Location = new System.Drawing.Point(0, 40);
-            this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.Size = new System.Drawing.Size(214, 40);
-            this.menuStrip3.TabIndex = 2;
-            this.menuStrip3.Text = "menuStrip3";
-            // 
-            // inventoryToolStripMenuItem
-            // 
-            this.inventoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.StackStripMenuItem});
-            this.inventoryToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.inventoryToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.inventoryToolStripMenuItem.Name = "inventoryToolStripMenuItem";
-            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
-            this.inventoryToolStripMenuItem.Text = "Inventory";
-            // 
-            // StackStripMenuItem
-            // 
-            this.StackStripMenuItem.Name = "StackStripMenuItem";
-            this.StackStripMenuItem.Size = new System.Drawing.Size(152, 36);
-            this.StackStripMenuItem.Text = "Stock ";
-            this.StackStripMenuItem.Click += new System.EventHandler(this.StackStripMenuItem_Click);
             // 
             // menuStrip4
             // 
@@ -224,6 +194,7 @@
             this.masterSetupToolStripMenuItem1.Name = "masterSetupToolStripMenuItem1";
             this.masterSetupToolStripMenuItem1.Size = new System.Drawing.Size(168, 36);
             this.masterSetupToolStripMenuItem1.Text = "Master Setup";
+            this.masterSetupToolStripMenuItem1.Click += new System.EventHandler(this.masterSetupToolStripMenuItem1_Click);
             // 
             // addMemberToolStripMenuItem
             // 
@@ -231,6 +202,13 @@
             this.addMemberToolStripMenuItem.Size = new System.Drawing.Size(340, 36);
             this.addMemberToolStripMenuItem.Text = "Add Member";
             this.addMemberToolStripMenuItem.Click += new System.EventHandler(this.addMemberToolStripMenuItem_Click);
+            // 
+            // UpdateDeleteStripMenue
+            // 
+            this.UpdateDeleteStripMenue.Name = "UpdateDeleteStripMenue";
+            this.UpdateDeleteStripMenue.Size = new System.Drawing.Size(340, 36);
+            this.UpdateDeleteStripMenue.Text = "Update & DeleteMember";
+            this.UpdateDeleteStripMenue.Click += new System.EventHandler(this.UpdateDeleteStripMenue_Click);
             // 
             // linkLabel1
             // 
@@ -329,13 +307,6 @@
             this.linklblUserName.Text = "Current User: ";
             this.linklblUserName.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblUserName_LinkClicked);
             // 
-            // UpdateDeleteStripMenue
-            // 
-            this.UpdateDeleteStripMenue.Name = "UpdateDeleteStripMenue";
-            this.UpdateDeleteStripMenue.Size = new System.Drawing.Size(340, 36);
-            this.UpdateDeleteStripMenue.Text = "Update & DeleteMember";
-            this.UpdateDeleteStripMenue.Click += new System.EventHandler(this.UpdateDeleteStripMenue_Click);
-            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,7 +315,6 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlMenue);
-            this.MainMenuStrip = this.menuStrip3;
             this.Name = "AdminForm";
             this.Text = "Admin Dashbord";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminForm_FormClosed);
@@ -356,8 +326,6 @@
             this.menuStrip1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            this.menuStrip3.ResumeLayout(false);
-            this.menuStrip3.PerformLayout();
             this.menuStrip4.ResumeLayout(false);
             this.menuStrip4.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -383,10 +351,7 @@
         private System.Windows.Forms.ToolStripMenuItem saleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salePunchStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saleSummaryStripMenuItem;
-        private System.Windows.Forms.MenuStrip menuStrip3;
         private System.Windows.Forms.ToolStripMenuItem allProductListStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem StackStripMenuItem;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Panel panel4;
