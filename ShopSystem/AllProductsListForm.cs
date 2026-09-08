@@ -12,16 +12,39 @@ namespace ShopSystem
 {
     public partial class AllProductsListForm : Form
     {
+        private ForDatabaseShortcutClass FDS { get; set; }
+
         public AllProductsListForm()
         {
             InitializeComponent();
+            this.FDS = new ForDatabaseShortcutClass();
+            this.TableView();
         }
 
+        private void TableView(string sql= "Select * from ProductInfoTable;")
+        {
+            DataSet ds = this.FDS.ExecuteQuery(sql);
+
+            this.dgvProductInfo.AutoGenerateColumns = false;
+            this.dgvProductInfo.DataSource=ds.Tables[0];
+
+        }
         private void btnBackfromPE_Click(object sender, EventArgs e)
         {
             AdminForm ad=new AdminForm();
             ad.Show();
             this.Visible = false;
+        }
+
+        private void dgvProductInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+
+        }
+
+        private void AllProductsListForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
