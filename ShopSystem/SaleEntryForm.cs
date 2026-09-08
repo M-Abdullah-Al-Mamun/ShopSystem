@@ -244,5 +244,10 @@ namespace ShopSystem
             }
 
         }
+
+        private void txtGrandTotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
