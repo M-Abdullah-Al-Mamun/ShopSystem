@@ -90,7 +90,7 @@ namespace ShopSystem
             this.txtId.Clear();
             this.txtName.Clear();
             this.txtPassword.Clear();
-            this.txtRole.Clear();
+            this.txtRole.Text = "";
         }
 
         private void AddMemberForm_FormClosed(object sender, FormClosedEventArgs e)
