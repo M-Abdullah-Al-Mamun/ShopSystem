@@ -35,7 +35,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtRole = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -45,6 +44,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtRole = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemberInfo)).BeginInit();
@@ -52,18 +52,20 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(125, 47);
+            this.txtId.Location = new System.Drawing.Point(168, 58);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(143, 20);
+            this.txtId.Size = new System.Drawing.Size(189, 22);
             this.txtId.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 47);
+            this.label1.Location = new System.Drawing.Point(45, 58);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 20);
+            this.label1.Size = new System.Drawing.Size(105, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Member Id";
             // 
@@ -71,60 +73,58 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(34, 87);
+            this.label2.Location = new System.Drawing.Point(45, 107);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.Size = new System.Drawing.Size(64, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Name";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(125, 87);
+            this.txtName.Location = new System.Drawing.Point(168, 107);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(143, 20);
+            this.txtName.Size = new System.Drawing.Size(189, 22);
             this.txtName.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(34, 127);
+            this.label3.Location = new System.Drawing.Point(45, 156);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 20);
+            this.label3.Size = new System.Drawing.Size(98, 25);
             this.label3.TabIndex = 5;
             this.label3.Text = "Password";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(125, 127);
+            this.txtPassword.Location = new System.Drawing.Point(168, 156);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(143, 20);
+            this.txtPassword.Size = new System.Drawing.Size(189, 22);
             this.txtPassword.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(34, 168);
+            this.label4.Location = new System.Drawing.Point(45, 207);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 20);
+            this.label4.Size = new System.Drawing.Size(51, 25);
             this.label4.TabIndex = 7;
             this.label4.Text = "Role";
-            // 
-            // txtRole
-            // 
-            this.txtRole.Location = new System.Drawing.Point(125, 168);
-            this.txtRole.Name = "txtRole";
-            this.txtRole.Size = new System.Drawing.Size(143, 20);
-            this.txtRole.TabIndex = 6;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.txtRole);
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txtRole);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.label2);
@@ -133,16 +133,18 @@
             this.panel1.Controls.Add(this.txtId);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(385, 450);
+            this.panel1.Size = new System.Drawing.Size(513, 554);
             this.panel1.TabIndex = 8;
             // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnBack.Location = new System.Drawing.Point(285, 398);
+            this.btnBack.Location = new System.Drawing.Point(380, 490);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(94, 40);
+            this.btnBack.Size = new System.Drawing.Size(125, 49);
             this.btnBack.TabIndex = 10;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -152,9 +154,10 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.btnAdd.Location = new System.Drawing.Point(198, 216);
+            this.btnAdd.Location = new System.Drawing.Point(264, 266);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(70, 42);
+            this.btnAdd.Size = new System.Drawing.Size(93, 52);
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -164,9 +167,10 @@
             // 
             this.panel2.Controls.Add(this.dgvMemberInfo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(385, 0);
+            this.panel2.Location = new System.Drawing.Point(514, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(415, 450);
+            this.panel2.Size = new System.Drawing.Size(553, 554);
             this.panel2.TabIndex = 9;
             // 
             // dgvMemberInfo
@@ -182,9 +186,11 @@
             this.Column4});
             this.dgvMemberInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvMemberInfo.Location = new System.Drawing.Point(0, 0);
+            this.dgvMemberInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvMemberInfo.Name = "dgvMemberInfo";
             this.dgvMemberInfo.ReadOnly = true;
-            this.dgvMemberInfo.Size = new System.Drawing.Size(415, 450);
+            this.dgvMemberInfo.RowHeadersWidth = 51;
+            this.dgvMemberInfo.Size = new System.Drawing.Size(553, 554);
             this.dgvMemberInfo.TabIndex = 0;
             this.dgvMemberInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMemberInfo_CellContentClick);
             // 
@@ -192,39 +198,60 @@
             // 
             this.Column1.DataPropertyName = "Id";
             this.Column1.HeaderText = "ID ";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
             // 
             // Column2
             // 
             this.Column2.DataPropertyName = "Name";
             this.Column2.HeaderText = "Name";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
             // 
             // Column3
             // 
             this.Column3.DataPropertyName = "Password";
             this.Column3.HeaderText = "Password";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 125;
             // 
             // Column4
             // 
             this.Column4.DataPropertyName = "Role";
             this.Column4.HeaderText = "Role";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 125;
+            // 
+            // txtRole
+            // 
+            this.txtRole.FormattingEnabled = true;
+            this.txtRole.Items.AddRange(new object[] {
+            "Admin",
+            "Manager",
+            "Sales Man"});
+            this.txtRole.Location = new System.Drawing.Point(167, 211);
+            this.txtRole.Name = "txtRole";
+            this.txtRole.Size = new System.Drawing.Size(190, 24);
+            this.txtRole.TabIndex = 11;
             // 
             // AddMemberForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "AddMemberForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -247,7 +274,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtRole;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnBack;
@@ -257,5 +283,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.ComboBox txtRole;
     }
 }
