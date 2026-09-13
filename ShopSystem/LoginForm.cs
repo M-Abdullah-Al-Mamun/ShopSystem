@@ -21,8 +21,7 @@ namespace ShopSystem
         private void btnLogin_Click(object sender, EventArgs e)
         {
             var sql = "select * from LoginTable where Id='"+this.txtId.Text+"'and Password='"+this.txtPassword.Text+"';";
-            SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-9IP21J0\SQLEXPRESS;Initial Catalog=c#ProjectDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
-            sqlcon.Open();
+            SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-H19A38MT\SQLEXPRESS01;Initial Catalog=C#ProjectDB;Integrated Security=True;");
             SqlCommand sqlcom = new SqlCommand(sql,sqlcon);
             SqlDataAdapter sda=new SqlDataAdapter(sqlcom);
             DataSet ds = new DataSet();
