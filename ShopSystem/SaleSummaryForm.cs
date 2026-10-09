@@ -22,17 +22,6 @@ namespace ShopSystem
             gridSaleSummary.DataSource = db.ExecuteQueryTable("SELECT * FROM SaleSummaryTable");
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBackfromSS_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-
-        }
-
         private void SaleSummaryForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
